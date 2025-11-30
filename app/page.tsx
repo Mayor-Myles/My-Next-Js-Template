@@ -25,6 +25,6 @@ export default function DashboardPage() {
       <TopNav/>
       <Wallet/>
     
-    <Flex/>
+    </Flex>
   );
 }
