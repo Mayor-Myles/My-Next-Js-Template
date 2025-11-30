@@ -17,33 +17,14 @@ import TopNav from '@/topnav';
 
 
 
-const transactions = [
-  {
-    title: 'MTN Data',
-    time: 'Today, 1:15 PM',
-    amount: '-₦250.78',
-    description: '1GB SME',
-  },
-  {
-    title: 'GLO Airtime',
-    time: 'Today, 9:00 AM',
-    amount: '-₦150.00',
-    description: 'Airtime',
-  },
-  {
-    title: 'TV Subscription',
-    time: '',
-    amount: '-₦354.90',
-    description: '',
-  },
-];
 
 export default function DashboardPage() {
   return (
-    <>
-    <TopNav/>
+    <Flex minH="100vh" direction="column" maxW="md">
+   
+      <TopNav/>
       <Wallet/>
     
-    </>
+    <Flex/>
   );
 }
