@@ -42,6 +42,7 @@ export default function DashboardPage() {
   return (
     <>
     <TopNav/>
+      <Wallet/>
     
     </>
   );
