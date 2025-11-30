@@ -34,7 +34,7 @@ export default function Wallet() {
       <Button
         
         position="absolute"
-        right="2px"
+        right="3px"
         borderRadius="full"
         boxSize="50px"
         bg="white"
