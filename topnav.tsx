@@ -29,7 +29,7 @@ export default function TopNav() {
       {/* Icons Section */}
       <Flex align="center" gap={3}>
         {/* Chat Icon */}
-        <Box position="">
+        <Box >
           <IconButton
             aria-label="messages"
             icon={<HiOutlineChatBubbleOvalLeft size={22} />}
@@ -48,7 +48,7 @@ export default function TopNav() {
         </Box>
 
         {/* Bell Icon */}
-        <Box position="">
+        <Box >
           <IconButton
             aria-label="notifications"
             icon={<HiOutlineBell size={22} />}
