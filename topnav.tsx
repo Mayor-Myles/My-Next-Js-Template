@@ -1,78 +1,72 @@
-import {
-  Box,
-  Flex,
-  Text,
-  Avatar,
-  IconButton,
-  Badge,
-  useColorModeValue,
-} from '@chakra-ui/react';
-import { BellIcon, ChatIcon } from '@chakra-ui/icons';
+import { Box, Flex, Avatar, Text, IconButton, Badge } from "@chakra-ui/react";
+import { HiOutlineChatBubbleOvalLeft, HiOutlineBell } from "react-icons/hi2";
 
-const TopNav = () => {
+export default function TopNav() {
   return (
     <Flex
-      as="nav"
+      w="100%"
       align="center"
       justify="space-between"
-      padding="1rem"
-      bg={useColorModeValue('white', 'gray.800')}
-      boxShadow="md"
+      px={4}
+      py={3}
+      bg="white"
     >
-      {/* Left: Profile and Welcome Message */}
-      <Flex align="center" gap={4}>
-        <Avatar name="Olaoluwa Abijo" src="/path-to-profile.jpg" />
-        <Text fontSize="lg" fontWeight="semibold">
-          Welcome, Olaoluwa Abijo
-        </Text>
+      {/* Left Section */}
+      <Flex align="center" gap={3}>
+        <Avatar
+          size="md"
+          name="Olaoluwa Abijo"
+          src="/your-avatar.png"   // replace with actual image if needed
+        />
+
+        <Box lineHeight="1.2">
+          <Text fontSize="sm" color="gray.500">
+            Welcome.
+          </Text>
+          <Text fontWeight="semibold">Olaoluwa Abijo</Text>
+        </Box>
       </Flex>
 
-      {/* Right: Notification Icons */}
-      <Flex align="center" gap={4}>
+      {/* Icons Section */}
+      <Flex align="center" gap={3}>
+        {/* Chat Icon */}
         <Box position="relative">
           <IconButton
-            aria-label="Messages"
-            icon={<ChatIcon />}
+            aria-label="messages"
+            icon={<HiOutlineChatBubbleOvalLeft size={22} />}
             variant="ghost"
-            size="md"
+            size="lg"
           />
           <Badge
             position="absolute"
-            top="0"
-            right="0"
+            top="2px"
+            right="2px"
             bg="red.500"
-            color="white"
-            fontSize="0.7em"
             borderRadius="full"
-            px={2}
-          >
-            3
-          </Badge>
+            boxSize="10px"
+            p="0"
+          />
         </Box>
 
+        {/* Bell Icon */}
         <Box position="relative">
           <IconButton
-            aria-label="Notifications"
-            icon={<BellIcon />}
+            aria-label="notifications"
+            icon={<HiOutlineBell size={22} />}
             variant="ghost"
-            size="md"
+            size="lg"
           />
           <Badge
             position="absolute"
-            top="0"
-            right="0"
+            top="2px"
+            right="2px"
             bg="red.500"
-            color="white"
-            fontSize="0.7em"
             borderRadius="full"
-            px={2}
-          >
-            5
-          </Badge>
+            boxSize="10px"
+            p="0"
+          />
         </Box>
       </Flex>
     </Flex>
   );
-};
-
-export default TopNav;
+}
