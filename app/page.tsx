@@ -20,7 +20,7 @@ import TopNav from '@/topnav';
 
 export default function DashboardPage() {
   return (
-    <Box align="center" justifyContent="center" minH="100vh" direction="column" maxW="md">
+    <Box minH="100vh" maxW="md">
    
       <TopNav/>
       <Wallet/>
