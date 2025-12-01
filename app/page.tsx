@@ -22,8 +22,8 @@ export default function DashboardPage() {
   return (
     <Flex 
   w="100%" 
-  justify="center"   // centers left-to-right
-  align="flex-start" // top alignment
+  justify="center"   
+  align="flex-start" 
   pt={10}     
       <TopNav/>
       <Wallet/>
