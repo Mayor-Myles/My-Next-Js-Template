@@ -6,15 +6,13 @@ export default function Wallet() {
   return (
     <Box
       
-      m={6}
-      
+      m={6}      
       bgGradient="linear(to-r, purple.500, purple.600)"
       borderRadius="xl"
       p="6"
       color="white"
-      
       boxShadow="lg"
-      mt="3em"
+      mt="5em"
     >
       <Flex justify="space-between" align="center" mb="2">
         <Flex align="center" gap="2">
@@ -35,7 +33,8 @@ export default function Wallet() {
 
       <Button
         
-        
+        position="absolute"
+        right="3px"
         borderRadius="full"
         boxSize="50px"
         bg="white"
