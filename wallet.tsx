@@ -5,7 +5,7 @@ import { FiTrendingUp, FiPlus } from "react-icons/fi";
 export default function Wallet() {
   return (
     <Flex
-
+      direction="column"
       m={6}
       maxW="360px"
       bgGradient="linear(to-r, purple.500, purple.600)"
