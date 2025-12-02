@@ -25,7 +25,7 @@ export default function DashboardPage() {
   justifyContent="center"   
   alignItems="flex-start" 
   direction="column"
-  pt={10} > 
+   > 
       
       <TopNav/>
       <Wallet/>
