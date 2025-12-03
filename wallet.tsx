@@ -7,8 +7,10 @@ export default function Wallet() {
 
     <Flex
   justify="center"
+      align="center"
   mt={{ base: 4, md: 10 }}   // small margin on mobile, bigger on desktop
-  px={{ base: 4, md: 0 }}    // small side-padding on mobile
+  px={{ base: 4, md: 0 }} 
+      // small side-padding on mobile
 >
     <Box
       w="100%"
