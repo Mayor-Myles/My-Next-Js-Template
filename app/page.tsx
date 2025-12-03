@@ -20,16 +20,21 @@ import TopNav from '@/topnav';
 
 export default function DashboardPage() {
   return (
-    <Flex 
-  w="100%"
-  justifyContent="center"   
-  alignItems="flex-start" 
-  direction="column"
-   > 
+    <>
       
       <TopNav/>
+
+    <Flex
+        w="100%"
+        justify="center"
+        align="flex-start"
+        mt="100px"         // pushes below TopNav
+        px={{ base: 4, md: 0 }}
+      >
       <Wallet/>
     
     </Flex>
+
+    </>
   );
 }
