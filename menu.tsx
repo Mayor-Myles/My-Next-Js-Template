@@ -38,13 +38,13 @@ export default function Menu() {
             align="center"
             justify="center"
             bg="gray.200"
-            borderRadius="xl"
+            borderRadius="2xl"
             py={4}
             cursor="pointer"
             _hover={{ bg: "gray.300" }}
           >
             <Icon as={item.icon} boxSize={6} mb={2} color="gray.700" />
-            <Text fontSize="sm" fontWeight="medium" color="gray.700">
+            <Text fontSize="xs" fontWeight="medium" color="gray.700">
               {item.label}
             </Text>
           </Flex>
