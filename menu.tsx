@@ -10,7 +10,7 @@ import {
   FiMessageSquare,
 } from "react-icons/fi";
 
-export default function QuickActionsMenu() {
+export default function Menu() {
   const menuItems = [
     { label: "Data", icon: FiDatabase },
     { label: "Airtime", icon: FiPhone },
