@@ -37,10 +37,10 @@ export default function DashboardPage() {
       <Wallet/>
     
     </Flex>
-
+<Advert />
       <Menu/>
       <Activity/>
-      <Advert />
+      
 
     </>
   );
