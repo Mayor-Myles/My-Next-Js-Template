@@ -10,7 +10,7 @@ export default function Advert() {
       borderRadius="lg"
       align="center"
       justify="space-between"
-      w="100%"
+      
       m={4}
     >
       {/* Left section with icon + text */}
