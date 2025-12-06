@@ -45,6 +45,7 @@ export default function Sidebar() {
       color="white"
       p="5"
       boxShadow="xl"
+      zIndex="999999"
     >
       {/* 🔎 Search Input */}
       <InputGroup mb="6">
