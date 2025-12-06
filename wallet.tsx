@@ -1,6 +1,6 @@
 
 import { Box, Flex, Text, Icon, Button } from "@chakra-ui/react";
-import { FiTrendingUp, FiPlus } from "react-icons/fi";
+import { FiGift, FiPlus } from "react-icons/fi";
 
 export default function Wallet() {
   return (
@@ -19,14 +19,14 @@ export default function Wallet() {
     >
       <Flex justify="space-between" align="center" mb="2">
         <Flex align="center" gap="2">
-          <Icon as={FiTrendingUp} boxSize={4} />
+          <Icon as={FiGift} boxSize={4} />
           <Text fontSize="sm" opacity={0.9}>
             ₦350
           </Text>
         </Flex>
 
         <Text fontSize="sm" opacity={0.9} cursor="pointer">
-          Commission
+          07014443165
         </Text>
       </Flex>
 
