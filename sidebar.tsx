@@ -18,7 +18,7 @@ import {
   InputLeftElement,
   useDisclosure,
   Button,
-  useBreakpoint,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import {
   FiMenu,
@@ -48,7 +48,8 @@ const menuItems = [
 
 export default function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const breakpoint = useBreakpoint();
+  const breakpoint = useMediaQuery('(min-width:768px)');
+  
 useEffect(()=>{
   alert(breakpoint)
 
