@@ -18,7 +18,7 @@ import Menu from '@/menu';
 import Activity from '@/activities';
 import Advert from '@/adverts';
 import BottomNav from "@/bottomNav";
-import Sidebar from "@/sidebar";
+//import Sidebar from "@/sidebar";
 
 
 
@@ -43,7 +43,7 @@ export default function DashboardPage() {
       <Menu/>
       <Activity/>
       <BottomNav/>
-      <Sidebar/>
+      
 
     </>
   );
