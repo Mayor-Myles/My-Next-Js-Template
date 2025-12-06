@@ -18,6 +18,7 @@ import {
   InputLeftElement,
   useDisclosure,
   Button,
+  useBreakpoint,
 } from "@chakra-ui/react";
 import {
   FiMenu,
@@ -28,6 +29,7 @@ import {
   FiMessageCircle,
   FiUser,
   FiSearch,
+  
 } from "react-icons/fi";
 import Link from "next/link";
 
@@ -37,13 +39,15 @@ const menuItems = [
   { label: "Buy Airtime", icon: FiSmartphone, href: "/airtime" },
   { label: "Bulk SMS", icon: FiMail, href: "/bulk-sms" },
   { label: "Support", icon: FiMessageCircle, href: "/support" },
-  { label: "Contact", icon: FiMessageCircle, href: "/contact" },
+  { label: "Contact Us", icon: FiMessageCircle, href: "/contact" },
   { label: "Profile", icon: FiUser, href: "/profile" },
 ];
 
 export default function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const breakpoint = useBreakpoint();
 
+  
   return (
     <>
       {/* Button to open drawer */}
@@ -57,18 +61,18 @@ export default function Sidebar() {
       </Button>
 
       {/* Drawer Sidebar */}
-      <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
+      <Drawer placement="left" onClose={onClose} isOpen={breakpoint === "md" ? true : isOpen}>
         <DrawerOverlay />
 
         <DrawerContent
-          bg="linear-gradient(180deg, #7B2FF7 0%, #9D4EDD 50%, #C77DFF 100%)"
+          bg="linear-gradient(180deg, #7B2FF7 0%, purple.500 50%, purple.600 100%)"
           color="white"
         >
           <DrawerCloseButton color="white" />
 
           <DrawerHeader borderBottomWidth="0" mt="4">
             <Text fontSize="xl" fontWeight="bold">
-              Menu
+              Mylezic
             </Text>
           </DrawerHeader>
 
