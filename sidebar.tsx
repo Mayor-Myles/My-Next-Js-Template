@@ -68,7 +68,7 @@ useEffect(()=>{
       </Button>
 
       {/* Drawer Sidebar */}
-      <Drawer placement="left" onClose={onClose} isOpen={breakpoint === true ? true : isOpen}>
+      <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
 
         <DrawerContent
