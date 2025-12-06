@@ -32,6 +32,9 @@ import {
   
 } from "react-icons/fi";
 import Link from "next/link";
+import {useEffect} from "react";
+
+
 
 const menuItems = [
   { label: "Home", icon: FiHome, href: "/" },
@@ -46,7 +49,10 @@ const menuItems = [
 export default function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const breakpoint = useBreakpoint();
-alert(breakpoint);
+useEffect(()=>{
+  alert(breakpoint)
+
+})
   
   return (
     <>
