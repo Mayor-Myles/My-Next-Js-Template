@@ -56,7 +56,7 @@ useEffect(()=>{
 })
   
   return (
-    <Box display={breakpoint && "none">
+    <Box display={breakpoint && "none"}>
       {/* Button to open drawer */}
       <Button
         leftIcon={<FiMenu />}
