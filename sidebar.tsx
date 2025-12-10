@@ -48,31 +48,18 @@ const menuItems = [
 
 export default function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const breakpoint = useMediaQuery('(min-width:768px)');
   
-useEffect(()=>{
-  alert(breakpoint)
-
-})
   
   return (
-    <Box display={breakpoint ? "none" : "flex"}>
       {/* Button to open drawer */}
-      <Button
-        leftIcon={<FiMenu />}
-        onClick={onOpen}
-        variant="ghost"
-        color="purple.600"
-      >
       
-      </Button>
 
       {/* Drawer Sidebar */}
       <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
 
         <DrawerContent
-          bg="linear-gradient(180deg, #7B2FF7 0%,darkviolet 50%, darkviolet 100%)"
+          bg="linear-gradient(180deg, #7B2FF7 0%,purple 50%, purple 100%)"
           color="white"
         >
           <DrawerCloseButton color="white" />
@@ -142,6 +129,6 @@ useEffect(()=>{
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-    </Box>
+    
   );
 }
