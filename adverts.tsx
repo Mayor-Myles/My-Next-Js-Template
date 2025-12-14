@@ -38,7 +38,7 @@ export default function Adverts() {
 
   return (
     <SimpleGrid 
-      columns={3} 
+      columns={1} 
       spacing={4} 
       p={4}
       maxW={isMobile ? "100%" : "1200px"}
