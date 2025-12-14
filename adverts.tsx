@@ -6,15 +6,18 @@ import { FiChevronRight } from "react-icons/fi";
 
 export default function Advert() {
   
-  const isMobile = useBreakpointValue({});
+  const isMobile = useBreakpointValue({base:true, md:false});
+
   return (
+
+    
     <Flex
       bg="#EFE6FF"                // light purple background
       p={4}
       borderRadius="lg"
       align="center"
       justify="space-between"
-      
+      w={!isMobile && '320px'}
       m={4}
     >
       {/* Left section with icon + text */}
