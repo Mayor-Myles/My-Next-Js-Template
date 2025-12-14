@@ -37,13 +37,17 @@ export default function Adverts() {
   ];
 
   return (
+
+    <Flex justifyContent="center">
+      
     <SimpleGrid 
-      columns={isMobile ? 2 : 3} 
+      columns={isMobile ? 1: 3} 
       spacing={4} 
       p={4}
       maxW={isMobile ? "100%" : "800px"}
       mx={isMobile ? "2em" : "6em"}
       overflowX="scroll"
+      direction="row"
     >
       {advertData.map((advert) => (
         <Flex
@@ -88,5 +92,6 @@ export default function Adverts() {
         </Flex>
       ))}
     </SimpleGrid>
+    </Flex>
   );
 }
