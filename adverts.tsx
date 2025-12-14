@@ -17,7 +17,7 @@ export default function Advert() {
       borderRadius="lg"
       align="center"
       justify="space-between"
-      w={!isMobile && '320px'}
+      w={!isMobile && ('320px')}
       m={4}
     >
       {/* Left section with icon + text */}
