@@ -26,10 +26,8 @@ export default function DashboardPage() {
   
   
   return (
-    
-    
-      
-    
+   
+    <>
       
       <TopNav/>
 
@@ -55,6 +53,6 @@ export default function DashboardPage() {
 
       
       <Sidebar/>
-      
+    </>
   );
 }
