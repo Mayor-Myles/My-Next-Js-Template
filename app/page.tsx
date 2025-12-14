@@ -37,11 +37,11 @@ export default function DashboardPage() {
         align="flex-start"
         mt="4.5em"         // pushes below TopNav
         px={{ base: 4, md: 0 }}
-      direction="column"
+      
       
       >
       <Wallet/>
-    
+    </Flex>
     
       
       <Advert />
@@ -49,7 +49,7 @@ export default function DashboardPage() {
       <Menu/>
       <Activity/>
       <BottomNav/>
-    </Flex>
+    
       <Sidebar/>
     </>
   );
