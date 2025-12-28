@@ -4,7 +4,7 @@ import { FiChevronRight, FiPercent, FiUsers } from "react-icons/fi";
 import { MdSecurity } from "react-icons/md";
 
 export default function Adverts() {
-  const isMobile = useBreakpointValue({ small: true, md: false });
+  const isMobile = useBreakpointValue({ sm: true, md: false });
 
   const advertData = [
     {
