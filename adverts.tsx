@@ -43,6 +43,7 @@ export default function Adverts() {
       px={4}
       py={2}
       my={2}
+      mx={{md:"8em"}}
       css={{
         '&::-webkit-scrollbar': {
           display: 'none',
@@ -55,7 +56,7 @@ export default function Adverts() {
         gap={4}
         width={isMobile ? "max-content" : "100%"}       
         minWidth={isMobile ? "max-content" : "480px"}
-        mx={{md:"8em"}}
+        
       >
         {advertData.map((advert) => (
           <Box
