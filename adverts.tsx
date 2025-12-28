@@ -43,7 +43,7 @@ export default function Adverts() {
       >
       
     <Grid 
-      templateColumns={isMobile ? "repeat(2,1fr)" : "repeat(3,1fr)"} 
+      templateColumns={isMobile ? "1fr" : "repeat(3,1fr)"} 
       gap={4} 
       p={4}
       maxW={isMobile ? "100%" : "600px"}
