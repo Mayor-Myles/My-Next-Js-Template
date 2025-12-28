@@ -22,7 +22,7 @@ export default function Menu() {
   ];
 
   return (
-    <Box p={4} m={5} mx={{md:"12em"}}>
+    <Box p={4} m={5} px={{md:"18em"}}>
       
 
       <Grid
