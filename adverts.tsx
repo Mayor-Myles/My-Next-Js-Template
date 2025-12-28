@@ -1,4 +1,4 @@
-import { useBreakpointValue, Box, Flex, Text, Icon, SimpleGrid, Grid } from "@chakra-ui/react";
+import { useBreakpointValue, Box, Flex, Text, Icon, SimpleGrid, Grid, GridItem } from "@chakra-ui/react";
 import { BsAward, BsWallet2, BsRocket } from "react-icons/bs";
 import { FiChevronRight, FiPercent, FiUsers } from "react-icons/fi";
 import { MdSecurity } from "react-icons/md";
