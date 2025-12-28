@@ -39,11 +39,11 @@ export default function Adverts() {
   return (
 
     <Flex justifyContent="center"
-    mx="7em"
+    
       >
       
     <SimpleGrid 
-      columns={isMobile ? 1: 3} 
+      columns={isMobile ? 2: 3} 
       spacing={4} 
       p={4}
       maxW={isMobile ? "100%" : "800px"}
