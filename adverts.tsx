@@ -48,7 +48,7 @@ export default function Adverts() {
       p={4}
       maxW={isMobile ? "100%" : "600px"}
   
-      overflowX="scroll"
+      
       
     >
       {advertData.map((advert) => (
