@@ -47,7 +47,7 @@ export default function Adverts() {
       spacing={4} 
       p={4}
       maxW={isMobile ? "100%" : "600px"}
-      mx={isMobile ? "2em" : "6em"}
+  
       overflowX="scroll"
       
     >
