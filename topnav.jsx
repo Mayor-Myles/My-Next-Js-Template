@@ -63,7 +63,7 @@ export const TopNav = ({ onMenuClick }) => {
               colorScheme="gray"
               color="gray.600"
             />
-            
+          </HStack>
         </Flex>
 
    
