@@ -14,8 +14,8 @@ function App() {
       <Box minH="100vh" bg="gray.50">
         <TopNav openSidebar={onOpen} />
         <Flex>
-          {!isMobile && <Sidebar isOpen={true} onClose={onClose} />}
-          {isMobile && <Sidebar isOpen={isOpen} onClose={onClose} isMobile={true} />}
+          {!isMobile && <Sidebar isOpen={true} />}
+          {isMobile && <Sidebar isOpen={isOpen} onClose={onClose} />}
           <Box flex="1" p={{ base: 4, md: 6 }}>
             <Box p={6} bg="white" borderRadius="lg" boxShadow="sm">
               <h1 style={{ fontSize: '2xl', fontWeight: 'bold', marginBottom: '16px' }}>
