@@ -15,7 +15,7 @@ function App() {
         <TopNav openSidebar={onOpen} />
         <Flex>
           {!isMobile && <Sidebar isOpen={true} onClose={onClose}   />}
-          {isMobile && <Sidebar isOpen={false} onClose={onClose}  />}
+          {isMobile && <Sidebar isOpen={isOpen} onClose={onClose}  />}
           <Box flex="1" p={{ base: 4, md: 6 }}>
             <Box p={6} bg="white" borderRadius="lg" boxShadow="sm">
               <h1 style={{ fontSize: '2xl', fontWeight: 'bold', marginBottom: '16px' }}>
