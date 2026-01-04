@@ -4,7 +4,7 @@
 import { HStack, Avatar, Text, Box, IconButton, Badge } from "@chakra-ui/react";
 import { FiMenu, FiBell } from "react-icons/fi";
 
-expor
+
   
 
 export const TopNav = ({openSidebar) => {
