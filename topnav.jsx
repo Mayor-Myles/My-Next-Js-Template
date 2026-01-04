@@ -9,6 +9,14 @@ import { FaRegLightbulb } from "react-icons/fa6";
 
 export const TopNav = ({openSidebar}) => {
   return (
+
+    <Box
+     position="sticky"
+      top="0"
+
+    zIndex="10"
+      >
+        
     <HStack
       w="100%"
       justify="space-between"
@@ -22,7 +30,7 @@ export const TopNav = ({openSidebar}) => {
         <Avatar
           name="Clement Adekunle"
           src="https://biteable.com/wp-content/uploads/2025/06/2006_thumb_small.jpg"
-          size="lg"
+          size="md"
           shadow="md"
         />
 
@@ -38,16 +46,7 @@ export const TopNav = ({openSidebar}) => {
 
       {/* Right section */}
       <HStack spacing={3}>
-        <IconButton
-          onClick={openSidebar}
-          aria-label="Menu"
-          icon={<FiMenu />}
-          rounded="lg"
-          bgGradient="linear(to-r, purple.400, purple.500)"
-          color="white"
-          _hover={{ bgGradient: "linear(to-r, purple.500, purple.600)" }}
-        />
-
+        
         <Box position="relative">
           <IconButton
             aria-label="Notifications"
@@ -64,18 +63,32 @@ export const TopNav = ({openSidebar}) => {
             bg="red.400"
             p="0"
           />
+          
         </Box>
+        
         <IconButton
           
           aria-label="Toggle light/dark mode"
-          icon={<FaRegLightbulb />}
+          icon={<FaRegLightbulb size.="md" />}
           rounded="lg"
           
           variant="ghost"
           
           />
+<IconButton
+          onClick={openSidebar}
+          aria-label="Menu"
+          icon={<FiMenu />}
+          rounded="lg"
+          bgGradient="linear(to-r, purple.400, purple.500)"
+          color="white"
+          _hover={{ bgGradient: "linear(to-r, purple.500, purple.600)" }}
+        />
 
       </HStack>
+
+      
     </HStack>
+      </Box>
   );
 }
