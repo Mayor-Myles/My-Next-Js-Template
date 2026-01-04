@@ -14,6 +14,7 @@ import {
   Badge,
   Divider,
   Flex,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import {
   FiHome,
@@ -28,6 +29,9 @@ import {
 } from "react-icons/fi";
 
 export const Sidebar = ({isOpen,onClose,onOpen = ()=>{}}) => {
+ 
+  const isMobile = useBreakpointValue({base:true,md:false});
+ 
   return (
     <Box
       w="280px"
@@ -35,6 +39,8 @@ export const Sidebar = ({isOpen,onClose,onOpen = ()=>{}}) => {
       bgGradient="linear(to-b, purple.500, purple.600)"
       color="white"
       p={5}
+
+      display={!isOpen ? "none" : "block"}
     >
       {/* Header */}
       <HStack justify="space-between" mb={6}>
