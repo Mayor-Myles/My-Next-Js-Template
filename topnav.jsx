@@ -21,8 +21,7 @@ export const TopNav = ({openSidebar}) => {
       <HStack spacing={3}>
         <Avatar
           name="Clement Adekunle"
-          src="https://thumbs.dreamstime.com/b/happy-african-man-face-beard-smiling-guy-head-icon-347622592.jpg"
-          // replace with your image
+          src="https://biteable.com/wp-content/uploads/2025/06/2006_thumb_small.jpg"
           boxSize="40px"
         />
 
@@ -71,6 +70,7 @@ export const TopNav = ({openSidebar}) => {
           icon={<FaRegLightbulb />}
           rounded="lg"
           color="white"
+          variant="ghost"
           
           />
 
