@@ -32,14 +32,14 @@ export const TopNav = ({ onMenuClick }) => {
       boxShadow="sm"
     >
     
-      <Box display={{ base: 'block', md: 'none' }}>
-        
+      <
+      
     
         <Flex justify="space-between" align="center" px={4} py={3}>
         
-          <Flex
+          <Flex><
           <Avatar 
-              size="sm" 
+              size="md" 
               name="Clement Adekunle" 
               bg="purple.500" 
               color="white"
@@ -69,7 +69,6 @@ export const TopNav = ({ onMenuClick }) => {
         </Flex> 
         
       </Box>
-      
-    </Box>
+    
   );
 };
