@@ -1,56 +1,27 @@
 'use client';
 
-import {
-  Box,
-  Button,
-  Divider,
-  Flex,
-  Heading,
-  IconButton,
-  Text,
-  VStack,
-  HStack,
-} from '@chakra-ui/react';
-import { FaHome, FaMoneyBill, FaHistory, FaUser } from 'react-icons/fa';
-import TopNav from '@/topnav';
- import Wallet from '@/wallet';
-import Menu from '@/menu';
-import Activity from '@/activities';
-import Advert from '@/adverts';
-import BottomNav from "@/bottomNav";
-import Sidebar from "@/sidebar";
+import { ChakraProvider, Box, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
+import { Sidebar } from './components/Sidebar';
+import { TopNav } from './components/TopNav';
 
+function App() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
-
-export default function DashboardPage() {
-  
-  
   return (
-   
-    <>
-      
-      <TopNav/>
-
-    <Flex
-        w="100%"
-        justify="center"
-        align="flex-start"
-        mt="4.5em"         // pushes below TopNav
-        px={{ base: 4, md: 0 }}
-      
-      
-      >
-      <Wallet/>
-    </Flex>
-    
-      
-      <Advert />
-      
-      <Menu/>
-      <Activity/>
-      <BottomNav/>
-    
-      <Sidebar/>
-    </>
+    <ChakraProvider>
+      <Box minH="100vh" bg="gray.50">
+        <TopNav onMenuClick={onOpen} />
+        <Box display="flex">
+          {!isMobile && <Sidebar isOpen={true} onClose={onClose} />}
+          {isMobile && <Sidebar isOpen={isOpen} onClose={onClose} isMobile={true} />}
+          <Box flex="1" p={{ base: 4, md: 6 }}>
+            {/* Your main content here */}
+          </Box>
+        </Box>
+      </Box>
+    </ChakraProvider>
   );
 }
+
+export default App;
