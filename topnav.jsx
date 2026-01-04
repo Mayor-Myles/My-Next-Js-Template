@@ -3,7 +3,7 @@
 
 import { HStack, Avatar, Text, Box, IconButton, Badge } from "@chakra-ui/react";
 import { FiMenu, FiBell } from "react-icons/fi";
-
+import { FaRegLightbulb } from "react-icons/fa6";
 
   
 
@@ -21,7 +21,8 @@ export const TopNav = ({openSidebar}) => {
       <HStack spacing={3}>
         <Avatar
           name="Clement Adekunle"
-          src="/avatar.png" // replace with your image
+          src="https://thumbs.dreamstime.com/b/happy-african-man-face-beard-smiling-guy-head-icon-347622592.jpg"
+          // replace with your image
           boxSize="40px"
         />
 
@@ -38,6 +39,7 @@ export const TopNav = ({openSidebar}) => {
       {/* Right section */}
       <HStack spacing={3}>
         <IconButton
+          onClick={openSidebar}
           aria-label="Menu"
           icon={<FiMenu />}
           rounded="lg"
@@ -63,6 +65,15 @@ export const TopNav = ({openSidebar}) => {
             p="0"
           />
         </Box>
+        <IconButton
+          
+          aria-label="Toggle light/dark mode"
+          icon={<FaRegLightbulb />}
+          rounded="lg"
+          color="white"
+          
+          />
+
       </HStack>
     </HStack>
   );
