@@ -12,7 +12,7 @@ function App() {
   return (
     <ChakraProvider>
       <Box minH="100vh" bg="gray.50">
-        <TopNav onMenuClick={onOpen} />
+        <TopNav openSidebar={onOpen} />
         <Flex>
           {!isMobile && <Sidebar isOpen={true} onClose={onClose} />}
           {isMobile && <Sidebar isOpen={isOpen} onClose={onClose} isMobile={true} />}
