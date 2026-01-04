@@ -31,10 +31,7 @@ export const TopNav = ({ onMenuClick }) => {
       zIndex={10}
       boxShadow="sm"
     >
-    
-      <
-      
-    
+         
         <Flex justify="space-between" align="center" px={4} py={3}>
         
           <Flex><
