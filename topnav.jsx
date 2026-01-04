@@ -24,17 +24,17 @@ export const TopNav = ({ onMenuClick }) => {
   return (
     <Box
       bg="white"
-      borderBottom="1px"
-      borderColor="gray.200"
-      position="sticky"
+      position="fixed"
       top={0}
       zIndex={10}
-      boxShadow="sm"
+      boxShadow="md"
+      width="100%"
+      p={4}
     >
          
-        <Flex justify="space-between" align="center" px={4} py={3}>
+        <Flex justify="space-between" align="center">
         
-          <Flex>
+          <HStack>
           <Avatar 
               size="md" 
               name="Clement Adekunle" 
@@ -51,7 +51,7 @@ export const TopNav = ({ onMenuClick }) => {
               Clement Adekunle
             </Text>
           </VStack>
-         </Flex>
+          </HStack>
           
           <HStack spacing={3}>
             <IconButton
