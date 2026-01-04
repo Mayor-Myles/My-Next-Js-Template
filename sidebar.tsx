@@ -1,213 +1,278 @@
 
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import {
+  Drawer,
+  DrawerBody,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
   Box,
   VStack,
   HStack,
   Text,
   Avatar,
-  Badge,
-  IconButton,
-  useDisclosure,
-  useBreakpointValue,
+  Button,
   Flex,
+  Badge,
+  useBreakpointValue,
   Divider,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  Stack,
 } from '@chakra-ui/react';
 import {
   FiHome,
-  FiShoppingCart,
   FiSmartphone,
   FiMessageSquare,
   FiHelpCircle,
-  FiMail,
   FiUser,
-  FiMenu,
-  FiSearch,
-  FiChevronLeft,
+  FiSettings,
+  FiSend,
+  FiDollarSign,
+  FiBriefcase,
+  FiArrowRight,
+  FiCreditCard,
 } from 'react-icons/fi';
+import { 
+  BsPhone, 
+  BsChatDots, 
+  BsPeople,
+  BsArrowRightShort
+} from 'react-icons/bs';
+import { MdOutlineSms, MdOutlineSendToMobile } from 'react-icons/md';
+import { TbTransfer } from 'react-icons/tb';
+import { AiOutlineGift } from 'react-icons/ai';
 
-const Sidebar = () => {
-  const { isOpen, onToggle } = useDisclosure();
-  const [activeItem, setActiveItem] = useState('home');
-  
-  // Responsive sidebar behavior
-  const isMobile = useBreakpointValue({ base: true, md: false });
-  const sidebarWidth = isMobile ? (isOpen ? '250px' : '0') : '270px';
-  
-  // Menu items
+export const Sidebar = ({ isOpen, onClose, isMobile = false }) => {
+  const isDrawer = useBreakpointValue({ base: true, md: false });
+
   const menuItems = [
-    { id: 'home', label: 'Home', icon: React.createElement(FiHome), isActive: activeItem === 'home' },
-    { id: 'buy-data', label: 'Buy Data', icon: React.createElement(FiShoppingCart), isActive: activeItem === 'buy-data' },
-    { id: 'buy-airtime', label: 'Buy Airtime', icon: React.createElement(FiSmartphone), isActive: activeItem === 'buy-airtime' },
-    { id: 'bulk-sms', label: 'Bulk SMS', icon: React.createElement(FiMessageSquare), count: 3, isActive: activeItem === 'bulk-sms' },
-    { id: 'support', label: 'Support', icon: React.createElement(FiHelpCircle), isActive: activeItem === 'support' },
-    { id: 'contact', label: 'Contact Us', icon: React.createElement(FiMail), isActive: activeItem === 'contact' },
-    { id: 'profile', label: 'Profile', icon: React.createElement(FiUser), isActive: activeItem === 'profile' },
+    { icon: FiHome, label: 'Home', active: true },
+    { icon: FiSmartphone, label: 'Buy Data' },
+    { icon: BsPhone, label: 'Buy Airtime' },
+    { icon: MdOutlineSms, label: 'Bulk SMS' },
+    { icon: FiHelpCircle, label: 'Support' },
+    { icon: BsPeople, label: 'Contact Us' },
+    { icon: FiUser, label: 'Profile' },
   ];
 
-  return (
-    <>
-      {/* Mobile Toggle Button */}
-      {isMobile && (
-        <IconButton
-          aria-label="Toggle Sidebar"
-          icon={isOpen ? React.createElement(FiChevronLeft) : React.createElement(FiMenu)}
-          onClick={onToggle}
-          position="fixed"
-          top="3"
-          right="5em"
-          zIndex="modal"
-          bgGradient="linear(to-r, purple.300, purple.400)"
-          color="white"
-          _hover={{ bgGradient: 'linear(to-r, purple.600, purple.700)' }}
-          size="md"
-          borderRadius="lg"
-        />
-      )}
+  const quickActions = [
+    { label: 'Data', icon: FiSmartphone, color: 'purple' },
+    { label: 'Airtime', icon: BsPhone, color: 'blue' },
+    { label: 'Hire Me', icon: FiBriefcase, color: 'green' },
+    { label: 'Bulk SMS', icon: BsChatDots, color: 'orange' },
+    { label: 'Transfer', icon: TbTransfer, color: 'red' },
+    { label: 'Settings', icon: FiSettings, color: 'gray' },
+  ];
 
-      {/* Sidebar */}
-      <Box
-        position={'fixed'}
-        left="0"
-        top="0"
-        h="100vh"
-        w={sidebarWidth}
-        bgGradient="linear(to-r, purple.500, purple.600)"
-        color="white"
-        boxShadow="xl"
-        transition="all 0.3s ease"
-        zIndex="9999"
-        overflowY="auto"
-        overflowX="hidden"
-        mr="3em"
-      >
-        {/* Logo and Search Section */}
-        <VStack spacing={6} p={6} align="stretch">
-          {/* Logo */}
-          <HStack justify="space-between" align="center">
-            <Text fontSize="2xl" fontWeight="bold" letterSpacing="tight">
-              Mylezic
+  const sidebarContent = (
+    <Box 
+      w={{ base: 'full', md: '280px' }} 
+      h="100vh" 
+      bg="white" 
+      borderRight="1px" 
+      borderColor="gray.200"
+      overflowY="auto"
+      display="flex"
+      flexDirection="column"
+    >
+      {/* Welcome Section */}
+      <Box p={4} bg="purple.50" borderBottom="1px" borderColor="purple.100">
+        <Text fontSize="sm" color="purple.600" mb={2} fontWeight="medium">
+          Welcome.
+        </Text>
+        <Text fontWeight="bold" fontSize="lg" mb={1}>
+          Clement Adekunle
+        </Text>
+        <VStack align="start" spacing={1}>
+          <HStack spacing={2}>
+            <Text fontSize="2xl" fontWeight="bold" color="purple.600">
+              N350
             </Text>
-            {isMobile && isOpen && (
-              <IconButton
-                aria-label="Close Sidebar"
-                icon={React.createElement(FiChevronLeft)}
-                onClick={onToggle}
-                variant="ghost"
-                color="white"
-                _hover={{ bg: 'purple.600' }}
-                size="sm"
-              />
-            )}
+            <Text fontSize="sm" color="gray.600">
+              07014443165
+            </Text>
           </HStack>
-
-          {/* Search */}
-          <InputGroup>
-            <InputLeftElement pointerEvents="none">
-              <FiSearch color="white" />
-            </InputLeftElement>
-            <Input
-              placeholder="Search..."
-              bg="rgba(255, 255, 255, 0.15)"
-              border="none"
-              color="white"
-              _placeholder={{ color: 'whiteAlpha.700' }}
-              _hover={{ bg: 'rgba(255, 255, 255, 0.2)' }}
-              _focus={{ bg: 'rgba(255, 255, 255, 0.2)', boxShadow: 'outline' }}
-            />
-          </InputGroup>
+          <Text fontSize="lg" fontWeight="bold" color="green.600">
+            N1,6795.25
+          </Text>
+          <Button 
+            size="sm" 
+            colorScheme="purple" 
+            variant="outline" 
+            mt={2}
+            width="40px"
+            height="40px"
+            borderRadius="full"
+            fontSize="lg"
+          >
+            +
+          </Button>
         </VStack>
+      </Box>
 
-        <Divider borderColor="whiteAlpha.300" />
+      {/* Become an Agent Banner */}
+      <Box p={4} bg="purple.600" color="white">
+        <Text fontWeight="bold" fontSize="sm" mb={1}>
+          Become an Agent
+        </Text>
+        <Text fontSize="xs" opacity={0.9}>
+          Get 50% off every transaction
+        </Text>
+        <HStack mt={1} spacing={1} fontSize="xs">
+          <Text>Earn</Text>
+          <Text fontWeight="bold">|</Text>
+          <Text>Up to 'airtime'</Text>
+        </HStack>
+      </Box>
 
-        {/* Menu Items */}
-        <Stack spacing={1} p={4}>
-          {menuItems.map((item) => (
-            <Flex
-              key={item.id}
-              align="center"
-              p={3}
-              borderRadius="lg"
-              cursor="pointer"
-              bg={item.isActive ? 'whiteAlpha.200' : 'transparent'}
-              _hover={{ bg: 'whiteAlpha.200' }}
-              onClick={() => setActiveItem(item.id)}
-              transition="all 0.2s"
+      {/* Quick Actions Grid */}
+      <Box p={4}>
+        <Flex wrap="wrap" gap={2}>
+          {quickActions.map((action) => (
+            <Button
+              key={action.label}
+              size="sm"
+              variant="outline"
+              flex="1"
+              minW="80px"
+              fontSize="xs"
+              py={2}
+              height="auto"
+              flexDirection="column"
+              colorScheme={action.color}
+              color={`${action.color}.600`}
+              borderColor={`${action.color}.200`}
+              _hover={{ bg: `${action.color}.50` }}
             >
-              <Box fontSize="lg" mr={3}>
-                {item.icon}
-              </Box>
-              <Text fontWeight="medium" flex={1}>
-                {item.label}
-              </Text>
-              {item.count && (
-                <Badge
-                  colorScheme="whiteAlpha"
-                  bg="whiteAlpha.300"
-                  color="white"
-                  borderRadius="full"
-                  px={2}
-                >
-                  {item.count}
-                </Badge>
-              )}
-            </Flex>
+              <Box as={action.icon} mb={1} fontSize="lg" />
+              <Text>{action.label}</Text>
+            </Button>
           ))}
-        </Stack>
+        </Flex>
+      </Box>
 
-        <Divider borderColor="whiteAlpha.300" my={4} />
+      {/* Menu Items */}
+      <Box px={2} py={4}>
+        <VStack spacing={1} align="stretch">
+          {menuItems.map((item) => (
+            <Button
+              key={item.label}
+              variant="ghost"
+              justifyContent="start"
+              leftIcon={<Box as={item.icon} />}
+              isActive={item.active}
+              colorScheme={item.active ? 'purple' : 'gray'}
+              borderRadius="md"
+              py={3}
+              fontSize="sm"
+              fontWeight={item.active ? 'bold' : 'normal'}
+              color={item.active ? 'purple.600' : 'gray.700'}
+              bg={item.active ? 'purple.50' : 'transparent'}
+              _hover={{ bg: item.active ? 'purple.50' : 'gray.50' }}
+            >
+              {item.label}
+            </Button>
+          ))}
+        </VStack>
+      </Box>
 
-        {/* User Profile Section */}
-        <Box p={6}>
-          <HStack spacing={3}>
-            <Avatar
-              size="md"
-              name="John Doe"
-              src="https://bit.ly/dan-abramov"
-              border="2px solid white"
-            />
-            <Box>
-              <Text fontWeight="bold" fontSize="sm">
-                John Doe
-              </Text>
-              <HStack spacing={1} align="center">
-                <Box
-                  w="8px"
-                  h="8px"
-                  borderRadius="full"
-                  bg="green.300"
-                  boxShadow="0 0 8px rgba(72, 187, 120, 0.6)"
-                />
-                <Text fontSize="xs" color="whiteAlpha.800">
-                  Online
-                </Text>
-              </HStack>
-            </Box>
+      {/* Activities Section */}
+      <Box p={4} mt="auto">
+        <Divider mb={4} />
+        <HStack justify="space-between" mb={3}>
+          <Text fontSize="sm" fontWeight="bold" color="gray.700">
+            Activities
+          </Text>
+          <Button 
+            size="xs" 
+            variant="link" 
+            color="purple.600" 
+            rightIcon={<BsArrowRightShort />}
+            fontSize="xs"
+          >
+            See All
+          </Button>
+        </HStack>
+        <Box 
+          p={3} 
+          bg="yellow.50" 
+          borderRadius="md"
+          border="1px"
+          borderColor="yellow.200"
+        >
+          <HStack>
+            <Box as={AiOutlineGift} color="yellow.500" />
+            <Text fontSize="xs" fontWeight="bold" color="gray.700">
+              Reward
+            </Text>
           </HStack>
         </Box>
       </Box>
 
-      {/* Overlay for mobile */}
-      {isMobile && isOpen && (
-        <Box
-          position="fixed"
-          top="0"
-          left="0"
-          right="0"
-          bottom="0"
-          bg="blackAlpha.600"
-          zIndex="overlay"
-          onClick={onToggle}
-        />
-      )}
-    </>
+      {/* Profile Info at Bottom */}
+      <Box 
+        p={4} 
+        borderTop="1px" 
+        borderColor="gray.200"
+        bg="white"
+      >
+        <HStack spacing={3}>
+          <Avatar 
+            size="sm" 
+            name="John Doe" 
+            bg="purple.500" 
+            color="white"
+            fontSize="xs"
+          />
+          <Box flex="1">
+            <Text fontSize="sm" fontWeight="bold">
+              John Doe
+            </Text>
+            <Badge 
+              colorScheme="green" 
+              fontSize="2xs" 
+              px={2} 
+              borderRadius="full"
+              size="sm"
+            >
+              ● Online
+            </Badge>
+          </Box>
+          <Text fontSize="sm" color="gray.600">
+            07014443165
+          </Text>
+          <Button
+            aria-label="More"
+            variant="ghost"
+            size="sm"
+            color="purple.600"
+            p={1}
+          >
+            <Box as={FiArrowRight} />
+          </Button>
+        </HStack>
+      </Box>
+    </Box>
   );
-};
 
-export default Sidebar;
+  if (isMobile && isDrawer) {
+    return (
+      <Drawer
+        isOpen={isOpen}
+        placement="left"
+        onClose={onClose}
+        size="full"
+      >
+        <DrawerOverlay />
+        <DrawerContent maxW="280px">
+          <DrawerCloseButton />
+          <DrawerBody p={0}>
+            {sidebarContent}
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    );
+  }
+
+  return sidebarContent;
+};
