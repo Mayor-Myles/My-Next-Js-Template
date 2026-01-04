@@ -3,8 +3,7 @@
 
 import { HStack, Avatar, Text, Box, IconButton, Badge } from "@chakra-ui/react";
 import { FiMenu, FiBell } from "react-icons/fi";
-import { FaRegLightbulb } from "react-icons/fa6";
-
+import { CiLight } from "react-icons/ci";
   
 
 export const TopNav = ({openSidebar}) => {
@@ -69,10 +68,10 @@ export const TopNav = ({openSidebar}) => {
         <IconButton
           
           aria-label="Toggle light/dark mode"
-          icon={<FaRegLightbulb size="md" />}
+          icon={<CiLight size="md" />}
           rounded="lg"
           color="black"
-          variant="ghost"
+          
           
           />
 <IconButton
