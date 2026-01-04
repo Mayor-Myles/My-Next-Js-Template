@@ -41,7 +41,7 @@ export const Sidebar = ({isOpen,onClose,onOpen = ()=>{}}) => {
         <Text fontSize="2xl" fontWeight="bold">
           Mylezic
         </Text>
-        <Icon as={FiChevronLeft} boxSize={5} />
+        <Icon onClick={onClose} as={FiChevronLeft} boxSize={5} />
       </HStack>
 
       {/* Search */}
