@@ -16,8 +16,8 @@ import {
   VStack,
   Divider,
 } from '@chakra-ui/react';
-import { SearchIcon, BellIcon, ChevronDownIcon } from '@chakra-ui/icons';
-import { FiMenu } from 'react-icons/fi';
+import { SearchIcon, ChevronDownIcon } from '@chakra-ui/icons';
+import { FiMenu, FiBell, } from 'react-icons/fi';
 import { BsPersonCircle } from 'react-icons/bs';
 
 export const TopNav = ({ onMenuClick }) => {
@@ -35,63 +35,38 @@ export const TopNav = ({ onMenuClick }) => {
       <Box display={{ base: 'block', md: 'none' }}>
         {/* First Row: Welcome and User Info */}
         <Flex justify="space-between" align="center" px={4} py={3}>
-          <VStack align="start" spacing={0}>
-            <Text fontSize="xs" color="gray.600">
-              Welcome.
-            </Text>
-            <Text fontSize="md" fontWeight="bold">
-              Clement Adekunle
-            </Text>
-          </VStack>
-          
-          <HStack spacing={3}>
-            <IconButton
-              aria-label="Notifications"
-              icon={<BellIcon />}
-              variant="ghost"
-              size="sm"
-              colorScheme="gray"
-              color="gray.600"
-            />
-            <Avatar 
+         <Box>
+          <Avatar 
               size="sm" 
               name="Clement Adekunle" 
               bg="purple.500" 
               color="white"
               fontSize="xs"
+              src="https://imgcdn.stablediffusionweb.com/2024/10/21/53295b80-0406-4810-aa02-b423c302ecbd.jpg"
             />
-          </HStack>
-        </Flex>
-
-        <Divider />
-
-        {/* Second Row: Balance and Phone */}
-        <Flex justify="space-between" align="center" px={4} py={3}>
-          <HStack spacing={4}>
-            <Text fontSize="2xl" fontWeight="bold" color="purple.600">
-              N350
+          <VStack align="start" spacing={0}>
+            <Text fontSize="xs" color="gray.600">
+              Welcome,
             </Text>
-            <Text fontSize="sm" color="gray.600">
-              07014443165
+            <Text fontSize="md" fontWeight="bold">
+              Clement Adekunle
             </Text>
-          </HStack>
+          </VStack>
+         </Box>
           
-          <HStack spacing={2}>
-            <Text fontSize="lg" fontWeight="bold" color="green.600">
-              N1,6795.25
-            </Text>
+          <HStack spacing={3}>
             <IconButton
-              aria-label="Add"
-              icon={<Box fontSize="lg">+</Box>}
-              variant="outline"
-              colorScheme="purple"
-              size="sm"
-              width="30px"
-              height="30px"
-              borderRadius="full"
+              aria-label="Notifications"
+              icon={<FiBell />}
+              variant="ghost"
+              size="lg"
+              colorScheme="gray"
+              color="gray.600"
             />
-          </HStack>
+            
         </Flex>
+
+   
       </Box>
 
       {/* Desktop Layout */}
