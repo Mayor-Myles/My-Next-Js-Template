@@ -1,7 +1,7 @@
 
 "use client";
 
-import { HStack, Avatar, Text, Box, IconButton, Badge } from "@chakra-ui/react";
+import { HStack, Avatar, Text, Box, IconButton, Badge, Icon} from "@chakra-ui/react";
 import { FiMenu, FiBell } from "react-icons/fi";
 import { CiLight } from "react-icons/ci";
   
@@ -65,10 +65,10 @@ export const TopNav = ({openSidebar}) => {
           
         </Box>
         
-        <IconButton
+        <Icon
           
           aria-label="Toggle light/dark mode"
-          icon={<CiLight size="md" />}
+          as={<CiLight size="md" />}
           rounded="lg"
           color="black"
           
