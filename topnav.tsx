@@ -1,63 +1,103 @@
-import { Box, Flex, Avatar, Text, IconButton, Badge, useDisclosure, Button } from "@chakra-ui/react";
-import { HiOutlineChatBubbleOvalLeft, HiOutlineBell } from "react-icons/hi2";
-import Sidebar from "@/sidebar";
-import {FiMenu} from "react-icons/fi";
+import React from 'react';
+import {
+  Box,
+  Flex,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  IconButton,
+  Avatar,
+  Badge,
+  Text,
+  HStack,
+  VStack,
+} from '@chakra-ui/react';
+import { SearchIcon, BellIcon } from '@chakra-ui/icons';
+import { FiMenu } from 'react-icons/fi';
 
-
-export default function TopNav() {
-
-  const {isOpen, onOpen, onClose} = useDisclosure();
-  
+export const TopNav = ({ onMenuClick }) => {
   return (
-    <Flex
-      align="center"
-      justify="space-between"
-      px={4}
-      py={2}
+    <Box
       bg="white"
-      position="fixed"   // FIXED NAVBAR
-      top="0"
-      w="100%"           // FULL WIDTH
-      zIndex="1000"      // ON TOP OF ALL CONTENT
-      boxShadow="sm"     // OPTIONAL: Nice shadow
+      borderBottom="1px"
+      borderColor="gray.200"
+      px={4}
+      py={3}
+      position="sticky"
+      top={0}
+      zIndex={10}
+      boxShadow="sm"
     >
-      {/* Left Section */}
-      <Flex align="center" gap={3}>
-        <Avatar
-          size="md"
-          name="Clement Pauljo"
-          src="avatar.jpeg"
-        />
-        <Box lineHeight="1.2">
-          <Text fontSize="sm" color="gray.500">
-            Welcome.
-          </Text>
-          <Text fontWeight="bold">Clement Adekunle</Text>
-        </Box>
-      </Flex>
-      
-        {/* Bell Icon */}
-        <Box position="relative">
+      <Flex align="center" justify="space-between">
+        <HStack spacing={4}>
           <IconButton
-            aria-label="notifications"
-            icon={<HiOutlineBell size={23} />}
-            variant="solid"
-            size="lg"
+            aria-label="Open menu"
+            icon={<FiMenu />}
+            display={{ base: 'flex', md: 'none' }}
+            onClick={onMenuClick}
+            variant="ghost"
+            size="sm"
           />
-          <Badge
-            position="absolute"
-            top="3px"
-            right="2px"
-            bg="red.500"
-            borderRadius="full"
-            boxSize="6px"
-            p="2"
-          />
+          <Text fontSize="xl" fontWeight="bold" color="purple.600">
+            Mylezic
+          </Text>
+        </HStack>
+
+        <Box flex="1" maxW="400px" mx={4} display={{ base: 'none', md: 'block' }}>
+          <InputGroup>
+            <InputLeftElement pointerEvents="none">
+              <SearchIcon color="gray.400" />
+            </InputLeftElement>
+            <Input 
+              placeholder="Search..." 
+              bg="gray.50" 
+              borderRadius="full" 
+              fontSize="sm"
+            />
+          </InputGroup>
         </Box>
 
-      
-    
-      
-    </Flex>
+        <HStack spacing={4}>
+          <IconButton
+            aria-label="Notifications"
+            icon={<BellIcon />}
+            variant="ghost"
+            size="sm"
+            colorScheme="gray"
+          />
+          <HStack spacing={3}>
+            <Avatar 
+              size="sm" 
+              name="John Doe" 
+              bg="purple.500" 
+              color="white"
+              fontSize="xs"
+            />
+            <VStack spacing={0} align="start" display={{ base: 'none', md: 'flex' }}>
+              <Text fontSize="sm" fontWeight="bold">
+                John Doe
+              </Text>
+              <Badge colorScheme="green" fontSize="xs" px={2} borderRadius="full">
+                ● Online
+              </Badge>
+            </VStack>
+          </HStack>
+        </HStack>
+      </Flex>
+
+      <Box mt={3} display={{ base: 'block', md: 'none' }}>
+        <InputGroup>
+          <InputLeftElement pointerEvents="none">
+            <SearchIcon color="gray.400" />
+          </InputLeftElement>
+          <Input 
+            placeholder="Search..." 
+            bg="gray.50" 
+            borderRadius="full"
+            fontSize="sm"
+          />
+        </InputGroup>
+      </Box>
+    </Box>
   );
-}
+};
