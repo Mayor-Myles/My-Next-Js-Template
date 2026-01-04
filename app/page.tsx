@@ -1,8 +1,8 @@
 'use client';
 
 import { ChakraProvider, Box, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
-import { Sidebar } from '@/Sidebar';
-import { TopNav } from '@/TopNav';
+import { Sidebar } from '@/sidebar';
+import { TopNav } from '@/topNav';
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
