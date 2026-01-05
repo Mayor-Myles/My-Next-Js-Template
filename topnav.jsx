@@ -52,14 +52,14 @@ export const TopNav = ({openSidebar}) => {
         <Box position="relative">
           <IconButton
             aria-label="Notifications"
-            icon={<FiBell />}
+            icon={<FiBell size="md" />}
             rounded="lg"
             
           />
           <Badge
             position="absolute"
-            top="0.4"
-            right="0.5"
+            top="0.6"
+            right="0.6"
             boxSize="8px"
             rounded="full"
             bg="red.500"
