@@ -19,14 +19,7 @@ function App() {
           {!isMobile && <Sidebar isOpen={true} onClose={onClose}   />}
           {isMobile && <Sidebar isOpen={isOpen} onClose={onClose}  />}
           <Box flex="1" p={{ base: 4, md: 6 }}>
-            <Box p={6} bg="white" borderRadius="lg" boxShadow="sm">
-              <h1 style={{ fontSize: '2xl', fontWeight: 'bold', marginBottom: '16px' }}>
-                Welcome to Mylezic Dashboard
-              </h1>
-              <p style={{ color: 'gray.600' }}>
-                Your main content goes here. Navigate using the sidebar menu items.
-              </p>
-            </Box>
+          <Wallet />
           </Box>
         </Flex>
       </Box>
