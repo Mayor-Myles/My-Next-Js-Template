@@ -9,6 +9,7 @@ import {
   Button,
   Icon,
   Avatar,
+  Flex,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { FaApple, FaPlus } from "react-icons/fa";
