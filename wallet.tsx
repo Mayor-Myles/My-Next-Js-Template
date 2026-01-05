@@ -51,11 +51,11 @@ export default function Wallet() {
           roundedTop="2xl"
           roundedBottom="none"
           p={4}
-          w="320px"
+          w={{base:"100%", md:"320px"}}
         >
           <HStack justify="space-between">
             <Avatar size="xs" bg="black" />
-            <Text fontWeight="semibold">•••• •••• •••• 2585</Text>
+            <Text fontWeight="semibold">09060421395</Text>
           </HStack>
         </Box>
 
