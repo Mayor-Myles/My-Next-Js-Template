@@ -33,7 +33,7 @@ export default function Wallet() {
         rounded="xl"
         w="260px"
         boxShadow="lg"
-        display={isMobile && "none"}
+        display={isMobile ? "none" : "block"}
       >
         <Text fontSize="lg" fontWeight="semibold">
           “Spend wisely, save smart.”
@@ -65,7 +65,7 @@ export default function Wallet() {
           color="white"
           roundedBottom="2xl"
           p={5}
-          w="320px"
+          w={{base:"100%", md:"320px"}}
           position="relative"
         >
           <Icon as={FaApple} boxSize={6} />
@@ -118,7 +118,7 @@ export default function Wallet() {
         rounded="xl"
         p={3}
         boxShadow="sm"
-        display={isMobile && "none"}
+        display={isMobile ? "none" : "block"}
       >
         <Calendar />
       </Box>
