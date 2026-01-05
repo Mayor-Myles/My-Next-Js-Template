@@ -20,10 +20,11 @@ export default function Wallet() {
   const isMobile = useBreakpointValue({base:true,md:false});
     
   return (
-    <HStack
-      spacing={6}
+    
+    <Flex
+      gap={6}
       align="center"
-      
+      justifyContent="center"
     >
       {/* -------- QUOTE CARD -------- */}
       <Box
@@ -122,7 +123,7 @@ export default function Wallet() {
       >
         <Calendar />
       </Box>
-    </HStack>
+    </Flex>
   );
 }
 
