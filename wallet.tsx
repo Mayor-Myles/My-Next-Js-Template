@@ -1,52 +1,125 @@
+"use client";
 
-import { Box, Flex, Text, Icon, Button } from "@chakra-ui/react";
-import { FiGift, FiPlus } from "react-icons/fi";
+import React from "react";
+import {
+  Box,
+  HStack,
+  VStack,
+  Text,
+  Button,
+  Icon,
+  Avatar,
+} from "@chakra-ui/react";
+import { FaApple, FaPlus } from "react-icons/fa";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 
 export default function Wallet() {
+ 
+  
   return (
-
-    
-    <Box
-      w="100%"
-      maxW={{ base: "100%", md: "360px" }}   // full width on mobile, 360px on desktop
-      bgGradient="linear(to-r, purple.500, purple.600)"
-      borderRadius="xl"
-      p={6}
-      color="white"
-      boxShadow="lg"
-      position="relative"     // needed for absolute button
-      m={{ base: 2, md: 6 }}  // small margin on mobile, bigger on desktop
+    <HStack
+      spacing={6}
+      align="flex-start"
+      flexWrap="wrap"
     >
-      <Flex justify="space-between" align="center" mb="2">
-        <Flex align="center" gap="2">
-          <Icon as={FiGift} boxSize={4} />
-          <Text fontSize="sm" opacity={0.9}>
-            ₦350
-          </Text>
-        </Flex>
-
-        <Text fontSize="sm" opacity={0.9} cursor="pointer">
-          07014443165
-        </Text>
-      </Flex>
-
-      <Text fontSize="2xl" fontWeight="bold">
-        ₦1,6795.25
-      </Text>
-
-      <Button
-        position="absolute"
-        bottom="-20px"     // make it float below like the design
-        right="20px"
-        borderRadius="full"
-        boxSize="50px"
-        bg="white"
-        shadow="xl"
-        _hover={{ bg: "gray.100" }}
+      {/* -------- QUOTE CARD -------- */}
+      <Box
+        bg="gray.900"
+        color="white"
+        p={5}
+        rounded="xl"
+        w="260px"
+        boxShadow="lg"
       >
-        <Icon as={FiPlus} boxSize={6} color="purple.600" />
-      </Button>
-    </Box>
-    
+        <Text fontSize="lg" fontWeight="semibold">
+          “Spend wisely, save smart.”
+        </Text>
+        <Text fontSize="sm" mt={2} opacity={0.8}>
+          — Personal Finance Reminder
+        </Text>
+      </Box>
+
+      {/* -------- WALLET CARD (matches screenshot) -------- */}
+      <Box>
+        {/* Top small card */}
+        <Box
+          bg="#F6C26B"
+          roundedTop="2xl"
+          roundedBottom="none"
+          p={4}
+          w="320px"
+        >
+          <HStack justify="space-between">
+            <Avatar size="xs" bg="black" />
+            <Text fontWeight="semibold">•••• •••• •••• 2585</Text>
+          </HStack>
+        </Box>
+
+        {/* Main Wallet Card */}
+        <Box
+          bg="#8B6CFF"
+          color="white"
+          roundedBottom="2xl"
+          p={5}
+          w="320px"
+          position="relative"
+        >
+          <Icon as={FaApple} boxSize={6} />
+
+          <HStack justify="space-between" mt={3}>
+            <Text fontWeight="semibold">•••• •••• •••• 7845</Text>
+            <VStack spacing={0} align="flex-end">
+              <Text fontSize="xs" opacity={0.7}>Exp. Date</Text>
+              <Text fontWeight="semibold">08/26</Text>
+            </VStack>
+          </HStack>
+
+          <VStack align="flex-start" mt={4} spacing={1}>
+            <Text fontSize="xs" opacity={0.7}>Balance</Text>
+            <Text fontSize="3xl" fontWeight="bold">
+              $8,182.80
+            </Text>
+            <Text fontSize="xs" opacity={0.7}>Name</Text>
+            <Text fontWeight="semibold">Muminul Hoque</Text>
+          </VStack>
+
+          {/* Add Card Button */}
+          <HStack
+            position="absolute"
+            right="-20px"
+            bottom="-18px"
+            bg="white"
+            rounded="full"
+            px={2}
+            py={1}
+            boxShadow="md"
+          >
+            <Button
+              size="sm"
+              rounded="full"
+              bg="black"
+              color="white"
+              leftIcon={<FaPlus />}
+              _hover={{ bg: "gray.800" }}
+            >
+              Add Card
+            </Button>
+          </HStack>
+        </Box>
+      </Box>
+
+      {/* -------- CALENDAR -------- */}
+      <Box
+        bg="white"
+        rounded="xl"
+        p={3}
+        boxShadow="sm"
+      >
+        <Calendar />
+      </Box>
+    </HStack>
   );
 }
+
+
