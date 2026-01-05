@@ -54,23 +54,23 @@ export const TopNav = ({openSidebar}) => {
             aria-label="Notifications"
             icon={<FiBell />}
             rounded="lg"
-            bg="gray.100"
+            
           />
           <Badge
             position="absolute"
-            top="0.5"
+            top="0.4"
             right="0.5"
-            boxSize="10px"
+            boxSize="8px"
             rounded="full"
-            bg="red.400"
+            bg="red.500"
             p="0"
           />
           
         </Box>
         
         
-          <IconButton onClick={toggleColorMode} boxSize="35px" >
-            {colorMode=== "dark" ? ( <CiLight />) : ( <CiDark />) }
+          <IconButton onClick={toggleColorMode} size="md" >
+            {colorMode=== "dark" ? ( <CiLight siz="md"/>) : ( <CiDark size="md" />) }
           </IconButton>
              
         
