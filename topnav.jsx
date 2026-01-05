@@ -52,7 +52,7 @@ export const TopNav = ({openSidebar}) => {
         <Box position="relative">
           <IconButton
             aria-label="Notifications"
-            icon={<FiBell size="md" />}
+            icon={<FiBell size="2em" />}
             rounded="lg"
             
           />
@@ -70,7 +70,7 @@ export const TopNav = ({openSidebar}) => {
         
         
           <IconButton onClick={toggleColorMode} size="md" >
-            {colorMode=== "dark" ? ( <CiLight siz="md"/>) : ( <CiDark size="md" />) }
+            {colorMode=== "dark" ? ( <CiLight size="md"/>) : ( <CiDark size="md" />) }
           </IconButton>
              
         
