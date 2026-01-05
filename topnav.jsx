@@ -2,8 +2,8 @@
 "use client";
 
 import { HStack, Avatar, Text, Box, IconButton, Badge, Icon, useColorMode} from "@chakra-ui/react";
-import { FiMenu, FiBell } from "react-icons/fi";
-import { CiLight, CiDark } from "react-icons/ci";
+import { FiMenu,} from "react-icons/fi";
+import { CiLight, CiDark, CiBellOn } from "react-icons/ci";
   
 
 export const TopNav = ({openSidebar}) => {
@@ -13,10 +13,9 @@ export const TopNav = ({openSidebar}) => {
   return (
 
     <Box
-     position="sticky"
+      position="sticky"
       top="0"
-
-    zIndex="10"
+      zIndex="10"
       >
         
     <HStack
@@ -52,14 +51,14 @@ export const TopNav = ({openSidebar}) => {
         <Box position="relative">
           <IconButton
             aria-label="Notifications"
-            icon={<FiBell size="1.5em" />}
+            icon={<CiBellOn size="1.5em" />}
             rounded="lg"
             
           />
           <Badge
             position="absolute"
-            top="0.6"
-            right="0.6"
+            top="1"
+            right="1"
             boxSize="8px"
             rounded="full"
             bg="red.500"
