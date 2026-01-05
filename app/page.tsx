@@ -4,6 +4,8 @@ import React from 'react';
 import { ChakraProvider, Box, Flex, useDisclosure, useBreakpointValue } from '@chakra-ui/react';
 import { TopNav } from '@/topnav';
 import { Sidebar } from '@/sidebar';
+import Wallet from '@/wallet';
+
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
