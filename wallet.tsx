@@ -4,7 +4,7 @@ import { Box, Text, HStack, VStack, Flex } from "@chakra-ui/react";
 
 export default function Wallet() {
   return (
-    <Box
+    <Flex
       w="340px"
       h="200px"
       borderRadius="2xl"
@@ -68,6 +68,6 @@ export default function Wallet() {
           </HStack>
         </Flex>
       </VStack>
-    </Box>
+    </Flex>
   );
 }
