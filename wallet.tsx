@@ -45,7 +45,7 @@ export default function Wallet() {
           
         >
           Make hat while the sunshine. lore ipsum dolor itet.
-
+        </Text>
       </VStack>
     </Box>
   
