@@ -22,7 +22,7 @@ export default function Wallet() {
       <VStack spacing={6} px={6} textAlign="center">
         {/* Avatar */}
         <Avatar
-          size="xl"
+          size="sm"
           src="/bill-russell.jpg" // replace with your image path
           border="4px solid"
           borderColor="gray.700"
@@ -40,7 +40,7 @@ export default function Wallet() {
 
         {/* Quote */}
         <Text
-          fontSize="xl"
+          fontSize="sm"
           fontWeight="bold"
           lineHeight="1.4"
         >
