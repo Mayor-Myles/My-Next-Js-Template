@@ -19,7 +19,7 @@ export default function Wallet() {
       justifyContent="center"
       color="white"
     >
-      <VStack spacing={6} px={6} textAlign="center">
+      <VStack spacing={6} px={6} textAlign="center" mt={2}>
         {/* Avatar */}
         <Avatar
           size="sm"
@@ -40,7 +40,7 @@ export default function Wallet() {
 
         {/* Quote */}
         <Text
-          fontSize="md"
+          fontSize="sm"
           fontWeight="bold"
           
         >
