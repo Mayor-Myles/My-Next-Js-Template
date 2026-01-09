@@ -40,29 +40,12 @@ export default function Wallet() {
 
         {/* Quote */}
         <Text
-          fontSize="sm"
+          fontSize="md"
           fontWeight="bold"
           
         >
-          THIS GAME HAS ALWAYS BEEN,
-          <br />
-          AND WILL ALWAYS BE,
-          <br />
-          ABOUT BUCKETS.
-        </Text>
+          Make hat while the sunshine. lore ipsum dolor itet.
 
-        {/* Icon / Divider */}
-        <Box
-          w="40px"
-          h="40px"
-          borderRadius="full"
-          bg="gray.800"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Text fontSize="lg">🏀</Text>
-        </Box>
       </VStack>
     </Box>
   
