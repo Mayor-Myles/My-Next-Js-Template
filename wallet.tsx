@@ -3,7 +3,7 @@
 import { Box, Text, HStack, VStack, Flex, Avatar, } from "@chakra-ui/react";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
-
+import { CiCreditCard1 } from "react-icons/ci";
 
 
 export default function Wallet() {
@@ -82,13 +82,11 @@ export default function Wallet() {
         {/* Card Number */}
         <VStack align="flex-start" spacing={1}>
           <Text fontSize="xs" opacity={0.7} letterSpacing="widest">
-            CARD NUMBER
+            USER ID
           </Text>
           <HStack spacing={2}>
-            <Text letterSpacing="3px">****</Text>
-            <Text letterSpacing="3px">****</Text>
-            <Text letterSpacing="3px">****</Text>
-            <Text fontWeight="bold" fontSize="lg">
+            <Text letterSpacing="3px">09060421356</Text>
+             <Text fontWeight="bold" fontSize="lg">
               1234
             </Text>
           </HStack>
@@ -99,24 +97,23 @@ export default function Wallet() {
           <HStack spacing={10}>
             <VStack align="flex-start" spacing={0}>
               <Text fontSize="xs" opacity={0.7}>
-                VALID
+                BALANCE
               </Text>
-              <Text fontWeight="semibold">01/25</Text>
+              <Text fontWeight="semibold">5,525</Text>
             </VStack>
 
             <VStack align="flex-start" spacing={0}>
               <Text fontSize="xs" opacity={0.7}>
-                CVV
+                BONUS
               </Text>
               <Text fontWeight="semibold">345</Text>
             </VStack>
           </HStack>
 
-          {/* Mastercard dots */}
+          
           <HStack spacing={-2}>
-            <Box w="28px" h="28px" bg="#EB001B" borderRadius="full" />
-            <Box w="28px" h="28px" bg="#F79E1B" borderRadius="full" />
-          </HStack>
+            <CiCreditCard1 size="md" />
+                </HStack>
         </Flex>
       </VStack>
     </Box>
