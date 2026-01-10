@@ -117,6 +117,7 @@ export default function Wallet() {
         </Flex>
       </VStack>
     </Box>
+  <Calender />
 </Flex>
   );
 }
