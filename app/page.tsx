@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ChakraProvider, Box, Flex, useDisclosure, useBreakpointValue } from '@chakra-ui/react';
+import { ChakraProvider, Box, Flex, useDisclosure, useBreakpointValue, VStack } from '@chakra-ui/react';
 import { TopNav } from '@/topnav';
 import { Sidebar } from '@/sidebar';
 import Wallet from '@/wallet';
@@ -16,7 +16,8 @@ function App() {
     <ChakraProvider>
       <Box minH="100vh" bg="gray.50">
         <TopNav openSidebar={onOpen} />
-        
+
+        <VStack>
           {!isMobile && <Sidebar isOpen={true} onClose={onClose}   />}
           {isMobile && <Sidebar isOpen={isOpen} onClose={onClose}  />}
           <Box flex="1" p={{ base: 4, md: 6 }}>
@@ -24,7 +25,7 @@ function App() {
             
           </Box>
           <Stats/>
-        
+        </VStack>
       </Box>
     </ChakraProvider>
   );
