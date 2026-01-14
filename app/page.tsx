@@ -5,6 +5,7 @@ import { ChakraProvider, Box, Flex, useDisclosure, useBreakpointValue } from '@c
 import { TopNav } from '@/topnav';
 import { Sidebar } from '@/sidebar';
 import Wallet from '@/wallet';
+import Stats from '@/stats';
 
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
           {isMobile && <Sidebar isOpen={isOpen} onClose={onClose}  />}
           <Box flex="1" p={{ base: 4, md: 6 }}>
           <Wallet />
+            
           </Box>
+          <Stats/>
         </Flex>
       </Box>
     </ChakraProvider>
