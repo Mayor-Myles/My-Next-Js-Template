@@ -1,110 +1,65 @@
-import { useBreakpointValue, Box, Flex, Text, Icon, Grid, GridItem } from "@chakra-ui/react";
-import { BsAward } from "react-icons/bs";
-import { FiChevronRight, FiPercent } from "react-icons/fi";
-import { MdSecurity } from "react-icons/md";
+"use client";
 
-export default function Adverts() {
-  const isMobile = useBreakpointValue({ base: true, md: false });
+import { Box, Text, HStack, VStack, Icon, Flex } from "@chakra-ui/react";
+import { FiBriefcase, FiActivity, FiCheckCircle } from "react-icons/fi";
 
-  const advertData = [
-    {
-      id: 1,
-      title: "Become an Agent",
-      description: "Get 50% off every transaction",
-      icon: BsAward,
-      bgColor: "#EFE6FF",
-      iconColor: "purple.600",
-      arrowColor: "purple.600"
-    },
-    {
-      id: 2,
-      title: "Earn Rewards",
-      description: "Up to 10% cashback on airtime",
-      icon: FiPercent,
-      bgColor: "#E6F4FF",
-      iconColor: "blue.600",
-      arrowColor: "blue.600"
-    },
-    {
-      id: 3,
-      title: "Secure Payments",
-      description: "Bank-level encryption guaranteed",
-      icon: MdSecurity,
-      bgColor: "#FFE6E6",
-      iconColor: "red.600",
-      arrowColor: "red.600"
-    }
-  ];
+const stats = [
+  {
+    title: "Total Engagements",
+    value: "24",
+    change: "+4 this month",
+    icon: FiBriefcase,
+  },
+  {
+    title: "Active Contracts",
+    value: "6",
+    change: "+2 ongoing",
+    icon: FiActivity,
+  },
+  {
+    title: "Completed Engagements",
+    value: "18",
+    change: "+12%",
+    icon: FiCheckCircle,
+  },
+];
 
+export default function Stats() {
   return (
-    <Box 
-      width="100%"
-      overflowX="auto"
-      px={4}
-      py={2}
-      my={2}
-      mx={{md:"20em"}}
-      css={{
-        '&::-webkit-scrollbar': {
-          display: 'none',
-        },
-        '-ms-overflow-style': 'none',
-        'scrollbar-width': 'none',
-      }}
-    >
-      <Flex 
-        gap={4}
-        width={isMobile ? "max-content" : "100%"}       
-        minWidth={isMobile ? "max-content" : "480px"}
-        
-      >
-        {advertData.map((advert) => (
+    <Flex overflowX="auto" pb={2}>
+      <HStack spacing={4} minW="max-content">
+        {stats.map((item, index) => (
           <Box
-            key={advert.id}
-            bg={advert.bgColor}
-            p={4}
-            borderRadius="lg"
-            minWidth={isMobile ? "280px" : "auto"}
-            width={isMobile ? "280px" : "480px"}
-            flexShrink={0}
-            cursor="pointer"
-            _hover={{ transform: "translateY(-2px)", boxShadow: "lg" }}
-            transition="all 0.2s"
+            key={index}
+            bg="white"
+            borderRadius="2xl"
+            boxShadow="sm"
+            px={5}
+            py={4}
+            minW="220px"
           >
-            <Flex align="center" justify="space-between">
-              <Flex align="center" gap={3}>
-                <Flex
-                  bg="white"
-                  boxSize="40px"
-                  borderRadius="full"
-                  align="center"
-                  justify="center"
-                >
-                  <Icon as={advert.icon} fontSize={22} color={advert.iconColor} />
-                </Flex>
-                <Box>
-                  <Text fontWeight="bold" fontSize="md" color="black">
-                    {advert.title}
-                  </Text>
-                  <Text fontSize="sm" color="gray.600">
-                    {advert.description}
-                  </Text>
-                </Box>
-              </Flex>
-              <Flex
-                bg="white"
-                boxSize="36px"
-                borderRadius="full"
-                align="center"
-                justify="center"
-                ml={3}
-              >
-                <Icon as={FiChevronRight} fontSize={22} color={advert.arrowColor} />
-              </Flex>
-            </Flex>
+            <VStack align="flex-start" spacing={3}>
+              {/* Top */}
+              <HStack justify="space-between" w="100%">
+                <Text fontSize="sm" color="gray.500" fontWeight="medium">
+                  {item.title}
+                </Text>
+                <Icon as={item.icon} boxSize={5} color="purple.500" />
+              </HStack>
+
+              {/* Value */}
+              <Text fontSize="2xl" fontWeight="bold">
+                {item.value}
+              </Text>
+
+              {/* Change */}
+              <Text fontSize="sm" color="green.500" fontWeight="medium">
+                {item.change}
+              </Text>
+            </VStack>
           </Box>
         ))}
-      </Flex>
-    </Box>
+      </HStack>
+    </Flex>
   );
 }
