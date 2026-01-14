@@ -14,21 +14,21 @@ function App() {
 
   return (
     <ChakraProvider>
-      <Box minH="100vh" bg="gray.50">
+      <Flex direction="column" minH="100vh" bg="gray.50">
         <TopNav openSidebar={onOpen} />
 
       
           {!isMobile && <Sidebar isOpen={true} onClose={onClose}   />}
           {isMobile && <Sidebar isOpen={isOpen} onClose={onClose}  />}
         
-        <VStack>
+        <
         <Box flex="1" p={{ base: 4, md: 6 }}>
           <Wallet />
             
           </Box>
           <Stats/>
-        </VStack>
-      </Box>
+        
+      </Flex>
     </ChakraProvider>
   );
 }
