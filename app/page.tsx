@@ -16,7 +16,7 @@ function App() {
     <ChakraProvider>
       <Box minH="100vh" bg="gray.50">
         <TopNav openSidebar={onOpen} />
-        <Flex>
+        
           {!isMobile && <Sidebar isOpen={true} onClose={onClose}   />}
           {isMobile && <Sidebar isOpen={isOpen} onClose={onClose}  />}
           <Box flex="1" p={{ base: 4, md: 6 }}>
@@ -24,7 +24,7 @@ function App() {
             
           </Box>
           <Stats/>
-        </Flex>
+        
       </Box>
     </ChakraProvider>
   );
