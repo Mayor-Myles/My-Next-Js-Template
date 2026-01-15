@@ -31,7 +31,7 @@ export default function Stats() {
         {stats.map((item, index) => (
           <Box
             key={index}
-            bg="white"
+            
             borderRadius="2xl"
             boxShadow="sm"
             px={5}
