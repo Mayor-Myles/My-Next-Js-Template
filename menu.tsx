@@ -42,7 +42,7 @@ export default function ServicesMenu() {
     
       
         <Grid
-          templateColumns="repeat(8, minmax(72px, 1fr))"
+          templateColumns={{base:"repeat(4,1fr)" , md:"repeat(6,1fr)"}}
           gap={6}
           minW="max-content"
         >
