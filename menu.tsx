@@ -33,21 +33,21 @@ const services = [
 
 export default function ServicesMenu() {
   return (
-    <Box>
+    <Box mx="2">
       {/* Title */}
       <Text fontSize="lg" fontWeight="bold" mb={4}>
         Services
       </Text>
 
-      {/* Scrollable Grid */}
-      <Box overflowX="auto">
+    
+      
         <Grid
           templateColumns="repeat(8, minmax(72px, 1fr))"
           gap={6}
           minW="max-content"
         >
           {services.map((service, index) => (
-            <GridItem key={index}>
+            <GridItem shadow="md" key={index}>
               <VStack
                 spacing={2}
                 cursor="pointer"
@@ -84,7 +84,7 @@ export default function ServicesMenu() {
             </GridItem>
           ))}
         </Grid>
-      </Box>
+      
     </Box>
   );
 }
