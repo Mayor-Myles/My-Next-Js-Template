@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ChakraProvider, Box, Flex, useDisclosure, useBreakpointValue, VStack } from '@chakra-ui/react';
+import { ChakraProvider, Box, Flex, useDisclosure, useBreakpointValue, VStack,useColorModeValue, } from '@chakra-ui/react';
 import { TopNav } from '@/topnav';
 import { Sidebar } from '@/sidebar';
 import Wallet from '@/wallet';
@@ -12,9 +12,11 @@ function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isMobile = useBreakpointValue({ base: true, md: false });
 
+const bg = useColorModeValue({"gray.50","black"});
+  
   return (
     <ChakraProvider>
-      <Flex flexDirection="column" minH="100vh" bg="gray.50">
+      <Flex flexDirection="column" minH="100vh" bg={bg}>
         <TopNav openSidebar={onOpen} />
 
       
