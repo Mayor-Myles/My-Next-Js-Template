@@ -71,15 +71,13 @@ export default function Wallet() {
 
           
           <HStack>
-            <CiCreditCard1 size="md" />
+            <FiCreditCard size="md" />
                 </HStack>
         </Flex>
       </VStack>
     </Box>
 
-  <Flex display={["none","flex"]} h="150px">
   
-  </Flex>
     
 </Flex>
   );
