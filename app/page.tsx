@@ -6,6 +6,7 @@ import { TopNav } from '@/topnav';
 import { Sidebar } from '@/sidebar';
 import Wallet from '@/wallet';
 import Stats from '@/stats';
+import Menu from '@/menu';
 
 
 function App() {
@@ -24,7 +25,8 @@ const bg = useColorModeValue("gray.50","black");
         <Box  minH="100vh" bg={bg} ml={{"base":2,"md":280}}>
         <TopNav openSidebar={onOpen} />
           <Wallet />
-          <Stats/>     
+          <Stats/>  
+          <Menu />
       </Box>
     </ChakraProvider>
   );
