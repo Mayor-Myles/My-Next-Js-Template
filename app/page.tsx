@@ -7,7 +7,7 @@ import { Sidebar } from '@/sidebar';
 import Wallet from '@/wallet';
 import Stats from '@/stats';
 import Menu from '@/menu';
-
+import BottomNav from "@/bottomNav";
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -27,6 +27,7 @@ const bg = useColorModeValue("gray.50","black");
           <Wallet />
           <Stats/>  
           <Menu />
+          <BottomNav />
       </Box>
     </ChakraProvider>
   );
