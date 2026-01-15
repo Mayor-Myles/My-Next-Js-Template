@@ -11,7 +11,7 @@ export default function Wallet() {
   
   return (
 
-<Flex justifyContent="center">
+<Flex mx={{base:"1em", md:"5em", lg:"10em", xl:"14em" }} justifyContent="center">
      
     <Box
       h="150px"
@@ -23,7 +23,7 @@ export default function Wallet() {
       boxShadow="xl"
       w={{base:"100%"}}
       
-      mx={{base:"1em", md:"5em", lg:"10em", xl:"14em" }}
+      
       
     >
       {/* Decorative curve */}
