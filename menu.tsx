@@ -42,12 +42,12 @@ export default function ServicesMenu() {
     
       
         <Grid
-          templateColumns={{base:"repeat(4,1fr)" , md:"repeat(6,1fr)"}}
+          templateColumns={{base:"repeat(3,1fr)" , md:"repeat(6,1fr)"}}
           gap={6}
           minW="max-content"
         >
           {services.map((service, index) => (
-            <GridItem shadow="md" key={index}>
+            <GridItem key={index}>
               <VStack
                 spacing={2}
                 cursor="pointer"
@@ -62,7 +62,7 @@ export default function ServicesMenu() {
                   bg="white"
                   align="center"
                   justify="center"
-                  boxShadow="sm"
+                  boxShadow="md"
                 >
                   <Icon
                     as={service.icon}
