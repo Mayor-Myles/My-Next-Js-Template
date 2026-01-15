@@ -16,7 +16,7 @@ const bg = useColorModeValue({"gray.50","black"});
   
   return (
     <ChakraProvider>
-      <Flex flexDirection="column" minH="100vh" bg={bg}>
+      <Flex flexDirection="column" minH="100vh" bg={bg} justifyContent="center">
         <TopNav openSidebar={onOpen} />
 
       
