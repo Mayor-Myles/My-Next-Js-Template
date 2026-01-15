@@ -39,6 +39,8 @@ export const Sidebar = ({isOpen,onClose,onOpen = ()=>{}}) => {
       bgGradient="linear(to-b, purple.500, purple.600)"
       color="white"
       p={5}
+      position="fixed"
+      left="0"
 
       display={!isOpen ? "none" : "block"}
     >
