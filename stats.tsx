@@ -36,7 +36,7 @@ export default function Stats() {
             boxShadow="sm"
             px={5}
             py={4}
-            minW="220px"
+            minW="200px"
           >
             <VStack align="flex-start" spacing={3}>
               {/* Top */}
@@ -48,7 +48,7 @@ export default function Stats() {
               </HStack>
 
               {/* Value */}
-              <Text fontSize="2xl" fontWeight="bold">
+              <Text fontSize="lg" fontWeight="bold">
                 {item.value}
               </Text>
 
