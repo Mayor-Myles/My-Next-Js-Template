@@ -24,7 +24,7 @@ export const TopNav = ({openSidebar}) => {
       align="center"
       py={2}
       px={3}
-      bg={colorMode === "light" ? "white" : "#1e1e1e"}
+      bg={colorMode === "light" ? "white" : "black"}
     >
       {/* Left section */}
       <HStack spacing={3}>
