@@ -41,6 +41,7 @@ export const Sidebar = ({isOpen,onClose,onOpen = ()=>{}}) => {
       p={5}
       position="fixed"
       left="0"
+      zIndex="modal"
 
       display={!isOpen ? "none" : "block"}
     >
