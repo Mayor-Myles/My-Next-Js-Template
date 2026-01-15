@@ -16,14 +16,14 @@ const bg = useColorModeValue("gray.50","black");
   
   return (
     <ChakraProvider>
-      <Flex flexDirection="column" minH="100vh" bg={bg} justifyContent="flex-start">
-        <TopNav openSidebar={onOpen} />
-
+      
       
           {!isMobile && <Sidebar isOpen={true} onClose={onClose}   />}
           {isMobile && <Sidebar isOpen={isOpen} onClose={onClose}  />}
         
-        
+        <Flex flexDirection="column" minH="100vh" bg={bg} justifyContent="flex-start" ml="250">
+        <TopNav openSidebar={onOpen} />
+
         <Box p={{ base: 4, md: 6 }}>
           <Wallet />
             
