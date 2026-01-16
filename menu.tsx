@@ -37,7 +37,7 @@ export default function ServicesMenu() {
   const bg= useColorModeValue("white","black");
   
   return (
-    <Box mx={{base:2,md:"10",lg:"15",xl;"20"}}>
+    <Box mx={{base:2,md:"10",lg:"15",xl:"20"}}>
 
       
       {/* Title */}
