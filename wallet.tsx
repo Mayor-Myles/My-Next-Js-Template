@@ -11,7 +11,7 @@ export default function Wallet() {
   
   return (
 
-<Flex mt="4" mx={{base:"1em", md:"8em", lg:"14em", xl:"18em" }} justifyContent="center">
+<Flex bg="black" mt="4" mx={{base:"1em", md:"8em", lg:"14em", xl:"18em" }} justifyContent="center">
      
     <Box
       h="150px"
