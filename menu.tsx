@@ -32,10 +32,15 @@ const services = [
 ];
 
 export default function ServicesMenu() {
+
+  const bg= useColorModeValue("white","black");
+  
   return (
-    <Box mx="2">
+    <Box mx={{base:2,md:"10",lg:"15",xl;"20"}}>
+
+      
       {/* Title */}
-      <Text fontSize="md" fontWeight="bold" mb={4}>
+      <Text fontSize="xs" fontWeight="bold" mb={4}>
         Services
       </Text>
 
@@ -59,7 +64,7 @@ export default function ServicesMenu() {
                   w="56px"
                   h="56px"
                   borderRadius="full"
-                  
+                  bg={bg}
                   align="center"
                   justify="center"
                   boxShadow="sm"
