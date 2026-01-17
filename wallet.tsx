@@ -37,7 +37,7 @@ export default function Wallet() {
         borderRadius="full"
       />
 
-      <VStack align="flex-start" spacing={6} p={6}>
+      <VStack align="flex-start" spacing={6} p={3}>
         {/* Card Number */}
         <VStack align="flex-start" spacing={1}>
           <Text fontSize="xs" opacity={0.7} letterSpacing="widest">
@@ -45,9 +45,7 @@ export default function Wallet() {
           </Text>
           <HStack spacing={2}>
             <Text letterSpacing="3px">09060421356</Text>
-             <Text fontWeight="bold" fontSize="lg">
-              
-            </Text>
+             
           </HStack>
         </VStack>
 
