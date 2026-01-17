@@ -9,7 +9,7 @@ import {
 
 export default function BottomNav() {
  
-  bg = useColorModeValue("white","black");
+ const bg = useColorModeValue("white","black");
   
   return (
     <Box
