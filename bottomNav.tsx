@@ -1,4 +1,4 @@
-import { Box, Flex, IconButton, useColorMode} from "@chakra-ui/react";
+import { Box, Flex, IconButton, useColorModeValue} from "@chakra-ui/react";
 import {
   FiHome,
   FiClock,
