@@ -26,7 +26,8 @@ const bg = useColorModeValue("gray.50","black");
   return (
     <ChakraProvider>
 
-      < Home/>
+      
+      < TopNavbar />
       <HeroSection />
       <Services />
       
