@@ -16,6 +16,7 @@ import {
   useDisclosure,
   HStack,
   useColorModeValue,
+  useColorMode,
 } from "@chakra-ui/react";
 import { CiMenuFries, CiLight, CiDark } from "react-icons/ci";
 
