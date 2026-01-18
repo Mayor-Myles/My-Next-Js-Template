@@ -17,7 +17,7 @@ export default function HeroSection() {
   const secondary = "#6B46C1";
 
   return (
-    <Box bg="white" py={{ base: 10, md: 20 }}>
+    <Box py={{ base: 10, md: 20 }}>
       <Flex
         maxW="1200px"
         mx="auto"
@@ -81,7 +81,7 @@ export default function HeroSection() {
         {/* Image */}
         <Box flex="1" w="100%" textAlign="center">
           <Image
-            src="/hero-image.png" // replace with your image
+            src="https://biteable.com/wp-content/uploads/2025/06/2006_thumb_small.jpg" // replace with your image
             alt="Hire professionals"
             maxW="420px"
             mx="auto"
