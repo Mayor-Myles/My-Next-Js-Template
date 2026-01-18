@@ -11,10 +11,9 @@ import BottomNav from "@/bottomNav";
 import HeroSection from "@/hero"
 import Services from "@/services"
 import TopNavbar from "@/topnavbar"
-
-
-
 import Home from "@/home";
+import Projects from "@/projects";
+
 
 
 function App() {
@@ -30,6 +29,7 @@ const bg = useColorModeValue("gray.50","black");
       < TopNavbar />
       <HeroSection />
       <Services />
+      <Projects />
       
       {/*  <Box  minH="100vh"  ml={{"base":2,"md":280}}>
               {!isMobile && <Sidebar isOpen={true} onClose={onClose}   />}
