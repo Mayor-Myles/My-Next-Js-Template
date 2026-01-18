@@ -20,7 +20,7 @@ import { FiMenu } from "react-icons/fi";
 
 export default function TopNavbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const brandColor = "#4B2E83"; // deep purple
+  const brandColor = "purple"; // deep purple
 
   return (
     <>
@@ -29,8 +29,7 @@ export default function TopNavbar() {
         position="sticky"
         top="0"
         zIndex="1000"
-        bg="white"
-        borderBottom="1px solid"
+         boxShadow="sm"
         borderColor="gray.200"
       >
         <Flex
@@ -43,7 +42,7 @@ export default function TopNavbar() {
         >
           {/* Logo */}
           <Text fontSize="lg" fontWeight="bold" color={brandColor}>
-            MyLezic
+            Mylezic
           </Text>
 
           {/* Desktop Menu */}
@@ -91,6 +90,8 @@ export default function TopNavbar() {
               fontSize="20px"
               display={{ base: "flex", md: "none" }}
               onClick={onOpen}
+              bg="purple"
+              color="white"
             />
           </HStack>
         </Flex>
@@ -102,7 +103,7 @@ export default function TopNavbar() {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader fontWeight="bold" color={brandColor}>
-            MyLezic
+            Mylezic
           </DrawerHeader>
 
           <DrawerBody>
