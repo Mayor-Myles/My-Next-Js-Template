@@ -16,7 +16,7 @@ import {
   useDisclosure,
   HStack,
 } from "@chakra-ui/react";
-import { FiMenu } from "react-icons/fi";
+import { CiMenuFries } from "react-icons/ci";
 
 export default function TopNavbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -85,12 +85,12 @@ export default function TopNavbar() {
             {/* Mobile Menu Button */}
             <IconButton
               aria-label="Open Menu"
-              icon={<FiMenu />}
+              icon={<CiMenuFries />}
               variant="ghost"
               fontSize="20px"
               display={{ base: "flex", md: "none" }}
               onClick={onOpen}
-              bg="purple"
+              bgGradient="linear(to-r, purple.400, purple.500)"
               color="white"
             />
           </HStack>
