@@ -77,7 +77,7 @@ export default function Projects() {
             <GridItem key={index}>
               <VStack
                 align="stretch"
-                bg="gray.50"
+                
                 borderRadius="2xl"
                 overflow="hidden"
                 boxShadow="sm"
