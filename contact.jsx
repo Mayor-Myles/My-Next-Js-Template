@@ -13,7 +13,7 @@ import {
 
 export default function ContactUs() {
   return (
-    <Box py={{ base: 12, md: 20 }} bg="gray.50">
+    <Box py={{ base: 12, md: 20 }} >
       <Box maxW="1200px" mx="auto" px={{ base: 4, md: 8 }}>
         {/* Header */}
         <VStack spacing={3} mb={10} textAlign="center">
