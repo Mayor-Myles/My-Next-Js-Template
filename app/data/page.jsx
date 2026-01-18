@@ -14,14 +14,17 @@ import {
   Switch,
 } from "@chakra-ui/react";
 import TopNavbar from "@/topnavbar";
+import {useState} from "react";
+
+
 
 
 
 const networks = [
   { name: "MTN", color: "#FACC15" },
-  { name: "Airtel", color: "#9CA3AF" },
-  { name: "Glo", color: "#9CA3AF" },
-  { name: "9mobile", color: "#9CA3AF" },
+  { name: "Airtel", color: "red" },
+  { name: "Glo", color: "seagreen" },
+  { name: "9mobile", color: "mediumseagreen" },
 ];
 
 const plans = [
@@ -31,6 +34,9 @@ const plans = [
 ];
 
 export default function DataAirtimePage() {
+  
+  const [networkSelected,setNetworkSelected] = useState(null);
+  
   return (
     <Box minH="100vh" py={6}>
 
@@ -46,9 +52,10 @@ export default function DataAirtimePage() {
           {networks.map((net, i) => (
             <VStack key={i} spacing={1}>
               <Flex
+                onClick={()=>setNetworkSelected(net.name)}
                 w="72px"
                 h="72px"
-                bg={net.color}
+                bg={net === networkSelected ? net.color : "#9CA3AF"}
                 color="white"
                 borderRadius="xl"
                 align="center"
@@ -57,6 +64,7 @@ export default function DataAirtimePage() {
               >
                 
             <Text fontWeight="bold">{net.name}</Text>
+              
               </Flex>
                       
             </VStack>
