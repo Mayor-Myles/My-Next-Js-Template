@@ -95,7 +95,9 @@ export default function DataAirtimePage() {
           {plans.map((plan, i) => (
             <Box
               key={i}
-            
+              display="flex"
+              justifyContent="center"
+              align="center"
               p={2}
               borderRadius="2xl"
               boxShadow="lg"
@@ -122,7 +124,7 @@ export default function DataAirtimePage() {
         <Box
           p={5}
           borderRadius="2xl"
-          border="2px solid purple.500"
+          border="2px solid purple"
           mb={6}
         >
           <Text
