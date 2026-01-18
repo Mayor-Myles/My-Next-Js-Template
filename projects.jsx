@@ -40,7 +40,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <Box py={{ base: 10, md: 16 }} bg="white">
+    <Box py={{ base: 10, md: 16 }} >
       <Box maxW="1200px" mx="auto" px={{ base: 4, md: 8 }}>
         {/* Header */}
         <Flex justify="space-between" align="center" mb={8}>
