@@ -70,7 +70,7 @@ export default function TopNavbar() {
             <Button
               size="sm"
               variant="outline"
-              borderColor="gray.300"
+              borderColor="purple.600"
                >
               Sign In
             </Button>
@@ -79,7 +79,7 @@ export default function TopNavbar() {
               size="sm"
               bg={brandColor}
               color="white"
-              _hover={{ bg: "#3E256C" }}
+              _hover={{ bg: "purple.600" }}
               display={{ base: "none", md: "inline-flex" }}
             >
               Get Started
