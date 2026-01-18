@@ -15,7 +15,7 @@ import {
   DrawerCloseButton,
   useDisclosure,
   HStack,
-  useModeColorValue,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { CiMenuFries } from "react-icons/ci";
 
