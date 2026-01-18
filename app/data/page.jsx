@@ -29,7 +29,7 @@ const plans = [
 
 export default function DataAirtimePage() {
   return (
-    <Box bg="gray.50" minH="100vh" py={6}>
+    <Box minH="100vh" py={6}>
       <Box maxW="480px" mx="auto" px={4}>
         {/* Select Network */}
         <Text fontWeight="bold" mb={3}>
@@ -48,19 +48,14 @@ export default function DataAirtimePage() {
                 justify="center"
                 border={net.name === "MTN" ? "3px solid #3B82F6" : "none"}
               >
-                <Text fontWeight="bold">{net.name}</Text>
-              </Flex>
-              {net.name === "MTN" && (
-                <Text fontSize="sm" color="blue.500">
-                  Selected
-                </Text>
+                
               )}
             </VStack>
           ))}
         </HStack>
 
         {/* Recipient Number */}
-        <Box bg="white" p={4} borderRadius="2xl" mb={6} boxShadow="sm">
+        <Box p={4} borderRadius="2xl" mb={6} boxShadow="sm">
           <Text fontSize="sm" color="gray.500" mb={2}>
             RECIPIENT NUMBER
           </Text>
@@ -71,10 +66,10 @@ export default function DataAirtimePage() {
           />
         </Box>
 
-        {/* Frequently Bought */}
+        {/* Data Plans*/}
         <Flex justify="space-between" mb={3}>
           <Text fontWeight="bold">Frequently Bought</Text>
-          <Text color="blue.500" fontWeight="medium" cursor="pointer">
+          <Text color="purple.500" fontWeight="medium" cursor="pointer">
             See All
           </Text>
         </Flex>
@@ -84,10 +79,10 @@ export default function DataAirtimePage() {
             <Box
               key={i}
               bg="white"
-              p={4}
+              p={2}
               borderRadius="2xl"
               boxShadow="sm"
-              border={plan.size === "1.5GB" ? "2px solid #93C5FD" : "none"}
+              border={plan.size === "1.5GB" ? "2px solid purple.600" : "none"}
             >
               <Text fontWeight="bold">{plan.size}</Text>
               <Text fontSize="sm" color="gray.500">
@@ -96,7 +91,7 @@ export default function DataAirtimePage() {
               <Text
                 mt={2}
                 fontWeight="bold"
-                color="blue.600"
+                color="purple.600"
                 fontSize="lg"
               >
                 {plan.price}
@@ -105,19 +100,10 @@ export default function DataAirtimePage() {
           ))}
         </Grid>
 
-        {/* Tabs */}
-        <HStack bg="gray.200" p={1} borderRadius="xl" mb={6}>
-          <Button flex="1" bg="white" borderRadius="lg">
-            Data Plans
-          </Button>
-          <Button flex="1" variant="ghost">
-            Airtime Top-up
-          </Button>
-        </HStack>
-
+      
         {/* Transaction Summary */}
         <Box
-          bg="blue.50"
+          bg="purple.50"
           p={5}
           borderRadius="2xl"
           border="1px solid #BFDBFE"
@@ -153,7 +139,7 @@ export default function DataAirtimePage() {
               <Text fontWeight="medium">₦0.00</Text>
             </Flex>
 
-            <Box h="1px" bg="blue.200" my={2} />
+            <Box h="1px" bg="purple.200" my={2} />
 
             <Flex justify="space-between" align="center">
               <Text fontWeight="bold">Total Amount</Text>
@@ -162,23 +148,7 @@ export default function DataAirtimePage() {
               </Text>
             </Flex>
 
-            {/* Wallet */}
-            <Flex
-              bg="white"
-              p={4}
-              borderRadius="xl"
-              justify="space-between"
-              align="center"
-              mt={4}
-            >
-              <Box>
-                <Text fontSize="sm" color="gray.500">
-                  WALLET BALANCE
-                </Text>
-                <Text fontWeight="bold">₦24,500.00</Text>
-              </Box>
-              <Switch size="lg" colorScheme="blue" defaultChecked />
-            </Flex>
+          
           </VStack>
         </Box>
 
@@ -195,7 +165,7 @@ export default function DataAirtimePage() {
 
           <Button
             size="lg"
-            bg="#2563EB"
+            bg="purple.500"
             color="white"
             px={8}
             borderRadius="xl"
