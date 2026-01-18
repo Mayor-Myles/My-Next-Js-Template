@@ -8,6 +8,11 @@ import Wallet from '@/wallet';
 import Stats from '@/stats';
 import Menu from '@/menu';
 import BottomNav from "@/bottomNav";
+import HeroSection from "@/hero"
+
+
+
+
 
 import Home from "@/home";
 
@@ -22,6 +27,7 @@ const bg = useColorModeValue("gray.50","black");
     <ChakraProvider>
 
       < Home/>
+      <HeroSection />
       
       {/*  <Box  minH="100vh"  ml={{"base":2,"md":280}}>
               {!isMobile && <Sidebar isOpen={true} onClose={onClose}   />}
