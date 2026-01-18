@@ -125,7 +125,8 @@ export default function DataAirtimePage() {
         <Box
           p={5}
           borderRadius="2xl"
-          border="2px solid purple"
+          border="2px solid"
+          borderColor="purle.600"
           mb={6}
         >
           <Text
