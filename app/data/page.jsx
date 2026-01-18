@@ -35,7 +35,7 @@ const plans = [
 
 export default function DataAirtimePage() {
   
-  const [networkSelected,setNetworkSelected] = useState(null);
+  const [networkSelected,setNetworkSelected] = useState("MTN");
   
   return (
     <Box minH="100vh" py={6}>
