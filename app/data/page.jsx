@@ -14,7 +14,7 @@ import {
   Switch,
 } from "@chakra-ui/react";
 import TopNavbar from "@/topnavbar";
-import bottomNav from "@/bottomnav";
+import bottomNav from "@/bottomNav";
 import {useState,useEffect} from "react";
 
 
@@ -208,6 +208,7 @@ alert(networkSelected);
           </Button>
         </Flex>
       </Box>
+      <BottomNav />
     </Box>
   );
 }
