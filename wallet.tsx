@@ -14,7 +14,7 @@ export default function Wallet() {
 <Flex mt="4" mx={{base:"1em", md:"8em", lg:"14em", xl:"18em" }} justifyContent="center">
      
     <Box
-      h="120px"
+      h="122px"
       borderRadius="2xl"
       position="relative"
       overflow="hidden"
