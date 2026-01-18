@@ -33,7 +33,7 @@ const bg = useColorModeValue("gray.50","black");
           <Stats/>  
           <Menu />
           <BottomNav />
-      </Box>*}
+      </Box>*/}
       
     </ChakraProvider>
   );
