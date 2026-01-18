@@ -13,7 +13,7 @@ import {
   Badge,
   Switch,
 } from "@chakra-ui/react";
-import TopNavbar from "@/topnavnar";
+import TopNavbar from "@/topnavbar";
 
 
 
