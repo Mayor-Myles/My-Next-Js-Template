@@ -13,6 +13,8 @@ import Services from "@/services"
 import TopNavbar from "@/topnavbar"
 import Home from "@/home";
 import Projects from "@/projects";
+import ContactUs from "@/contact";
+import Footer from "@/footer";
 
 
 
@@ -30,6 +32,8 @@ const bg = useColorModeValue("gray.50","black");
       <HeroSection />
       <Services />
       <Projects />
+      <ContactUs />
+      <Footer />
       
       {/*  <Box  minH="100vh"  ml={{"base":2,"md":280}}>
               {!isMobile && <Sidebar isOpen={true} onClose={onClose}   />}
