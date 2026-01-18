@@ -49,7 +49,11 @@ export default function DataAirtimePage() {
                 border={net.name === "MTN" ? "3px solid #3B82F6" : "none"}
               >
                 
+            <Text fontWeight="bold">{net.name}</Text>
+              </Flex>
               )}
+              
+            
             </VStack>
           ))}
         </HStack>
