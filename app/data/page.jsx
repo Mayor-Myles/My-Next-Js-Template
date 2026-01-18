@@ -14,7 +14,7 @@ import {
   Switch,
 } from "@chakra-ui/react";
 import TopNavbar from "@/topnavbar";
-import {useState} from "react";
+import {useState,useEffect} from "react";
 
 
 
@@ -36,6 +36,13 @@ const plans = [
 export default function DataAirtimePage() {
   
   const [networkSelected,setNetworkSelected] = useState("MTN");
+
+useEffect(()=>{
+
+alert(networkSelected);
+  
+},[networkSelected]);
+
   
   return (
     <Box minH="100vh" py={6}>
