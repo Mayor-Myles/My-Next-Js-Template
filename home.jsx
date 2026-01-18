@@ -1,5 +1,5 @@
 import topnav from "@/topnav";
-import {Box,Flex} from "@chakraui"
+import {Box,Flex} from "@chakra-ui/react";
 
 
 export default function Home(){
