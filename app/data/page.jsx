@@ -36,16 +36,9 @@ const plans = [
 
 export default function DataAirtimePage() {
   
-  const [networkSelected,setNetworkSelected] = useState("MTN");
+  const [networkSelected,setNetworkSelected] = useState();
 
   const [selectedPlan,setSelectedPlan] = useState(null);
-
-  
-useEffect(()=>{
-
-alert(networkSelected);
-  
-},[networkSelected]);
 
   
   return (
@@ -66,7 +59,7 @@ alert(networkSelected);
                 onClick={()=>setNetworkSelected(net.name)}
                 w="72px"
                 h="72px"
-                bg={net === networkSelected ? net.color : "#9CA3AF"}
+                bg={networkSelected === net.name ? net.color : "#9CA3AF"}
                 color="white"
                 borderRadius="xl"
                 align="center"
@@ -114,7 +107,8 @@ alert(networkSelected);
               borderRadius="2xl"
               boxShadow="lg"
               border={plan.size === "1.5GB" ? "2px solid purple.600" : "none"}
-            >
+            onClick={()=>setSelectedPlan(plan.size)}
+              >
               <Text fontWeight="bold">{plan.size}</Text>
               <Text fontSize="sm" color="gray.500">
                 {plan.duration}
