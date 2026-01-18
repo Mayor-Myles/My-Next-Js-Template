@@ -83,7 +83,7 @@ export default function HeroSection() {
           <Image
             src="https://biteable.com/wp-content/uploads/2025/06/2006_thumb_small.jpg" // replace with your image
             alt="Hire professionals"
-            maxW="420px"
+            maxW="210px"
             mx="auto"
           />
         </Box>
