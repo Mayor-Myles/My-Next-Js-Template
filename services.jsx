@@ -50,7 +50,7 @@ export default function Services() {
         {/* Services Grid */}
         <Grid
           templateColumns={{
-            base: "repeat(2, 1fr)",
+            base: "repeat(3, 1fr)",
             sm: "repeat(3, 1fr)",
             md: "repeat(4, 1fr)",
           }}
@@ -59,8 +59,8 @@ export default function Services() {
           {services.map((service, index) => (
             <GridItem key={index}>
               <VStack
-                bg="white"
-                p={6}
+                
+                p={3}
                 borderRadius="2xl"
                 boxShadow="sm"
                 spacing={4}
@@ -73,8 +73,8 @@ export default function Services() {
               >
                 {/* Icon */}
                 <Flex
-                  w="64px"
-                  h="64px"
+                  w="50px"
+                  h="50px"
                   borderRadius="full"
                   bg="purple.100"
                   align="center"
@@ -82,7 +82,7 @@ export default function Services() {
                 >
                   <Icon
                     as={service.icon}
-                    boxSize={7}
+                    boxSize={4}
                     color="purple.700"
                   />
                 </Flex>
