@@ -31,7 +31,7 @@ const services = [
 
 export default function Services() {
   return (
-    <Box py={{ base: 10, md: 16 }} bg="gray.50">
+    <Box py={{ base: 10, md: 16 }} >
       <Box maxW="1200px" mx="auto" px={{ base: 4, md: 8 }}>
         {/* Section Header */}
         <Text
@@ -62,7 +62,7 @@ export default function Services() {
                 
                 p={3}
                 borderRadius="2xl"
-                boxShadow="sm"
+                boxShadow="md"
                 spacing={4}
                 cursor="pointer"
                 transition="0.25s ease"
