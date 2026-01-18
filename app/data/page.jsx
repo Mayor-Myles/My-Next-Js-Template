@@ -98,6 +98,7 @@ export default function DataAirtimePage() {
               display="flex"
               justifyContent="center"
               align="center"
+              flexFlow="column wrap"
               p={2}
               borderRadius="2xl"
               boxShadow="lg"
