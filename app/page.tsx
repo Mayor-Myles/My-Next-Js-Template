@@ -28,7 +28,7 @@ const bg = useColorModeValue("gray.50","black");
 
       < Home/>
       <HeroSection />
-      <Menu/>
+      <Services />
       
       {/*  <Box  minH="100vh"  ml={{"base":2,"md":280}}>
               {!isMobile && <Sidebar isOpen={true} onClose={onClose}   />}
