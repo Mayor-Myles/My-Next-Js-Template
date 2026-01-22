@@ -148,7 +148,7 @@ export default function DataAirtimePage() {
           <VStack spacing={3} align="stretch">
             <Flex justify="space-between">
               <Text color="gray.600">Service</Text>
-              <Text fontWeight="medium"> {networkSelected} Data ({selectedPlan.duration} {selectedPlan.size})</Text>
+              <Text fontWeight="medium"> {networkSelected} Data ({selectedPlan?.duration} {selectedPlan?.size})</Text>
             </Flex>
 
             <Flex justify="space-between">
@@ -158,7 +158,7 @@ export default function DataAirtimePage() {
 
             <Flex justify="space-between">
               <Text color="gray.600">Plan Cost</Text>
-              <Text fontWeight="medium">₦3,000.00</Text>
+              <Text fontWeight="medium">₦{selectedPlan?.price}</Text>
             </Flex>
 
             <Flex justify="space-between">
@@ -171,7 +171,7 @@ export default function DataAirtimePage() {
             <Flex justify="space-between" align="center">
               <Text fontWeight="bold">Total Amount</Text>
               <Text fontSize="2xl" fontWeight="bold" color="putple.600">
-                ₦{selectedPlan.price}
+                ₦{selectedPlan?.price}
               </Text>
             </Flex>
 
@@ -187,7 +187,7 @@ export default function DataAirtimePage() {
               TOTAL TO PAY
             </Text>
             <Text fontWeight="bold" fontSize="xl">
-              ₦{selectedPlan.price}
+              ₦{selectedPlan?.price}
             </Text>
           </Box>
 
