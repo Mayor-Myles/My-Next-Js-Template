@@ -38,8 +38,9 @@ export default function DataAirtimePage() {
   
   const [networkSelected,setNetworkSelected] = useState();
 
-  const [selectedPlan,setSelectedPlan] = useState(null);
+  const [selectedPlan,setSelectedPlan] = useState();
 
+  const [phoneNumber,setPhoneNumber] = useState("080xxxxxxxx");
   
   return (
     <Box minH="100vh" py={6}>
@@ -83,14 +84,14 @@ export default function DataAirtimePage() {
           <Input
             size="md"
             fontWeight="bold"
-            defaultValue="0803 456 7890"
+            defaultValue={phoneNumber}
             variant="flushed"
             
           />
         </Box>
 
         {/* Data Plans*/}
-        <Flex justify="space-between" mb={3}>
+        <Flex display={selectedPlan && "none"} justify="space-between" mb={3}>
           <Text fontWeight="bold">Data Plans</Text>
           
         </Flex>
@@ -107,7 +108,7 @@ export default function DataAirtimePage() {
               borderRadius="2xl"
               boxShadow="lg"
               border={plan.size === "1.5GB" ? "2px solid purple.600" : "none"}
-            onClick={()=>setSelectedPlan(plan.size)}
+            onClick={()=>setSelectedPlan(plan)}
               >
               <Text fontWeight="bold">{plan.size}</Text>
               <Text fontSize="sm" color="gray.500">
@@ -147,12 +148,12 @@ export default function DataAirtimePage() {
           <VStack spacing={3} align="stretch">
             <Flex justify="space-between">
               <Text color="gray.600">Service</Text>
-              <Text fontWeight="medium">MTN Data (Monthly 10GB)</Text>
+              <Text fontWeight="medium"> {networkSelected} Data ({selectedPlan.duration} {selectedPlan.size})</Text>
             </Flex>
 
             <Flex justify="space-between">
               <Text color="gray.600">Phone Number</Text>
-              <Text fontWeight="medium">0803 456 7890</Text>
+              <Text fontWeight="medium">{phoneNumber}</Text>
             </Flex>
 
             <Flex justify="space-between">
@@ -170,7 +171,7 @@ export default function DataAirtimePage() {
             <Flex justify="space-between" align="center">
               <Text fontWeight="bold">Total Amount</Text>
               <Text fontSize="2xl" fontWeight="bold" color="putple.600">
-                ₦3,000.00
+                ₦{selectedPlan.price}
               </Text>
             </Flex>
 
@@ -186,7 +187,7 @@ export default function DataAirtimePage() {
               TOTAL TO PAY
             </Text>
             <Text fontWeight="bold" fontSize="xl">
-              ₦3,000.00
+              ₦{selectedPlan.price}
             </Text>
           </Box>
 
