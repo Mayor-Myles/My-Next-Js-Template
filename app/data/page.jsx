@@ -25,7 +25,7 @@ const networks = [
   { name: "MTN", color: "#FACC15" },
   { name: "Airtel", color: "red" },
   { name: "Glo", color: "seagreen" },
-  { name: "9mobile", color: "mediumseagreen" },
+  { name: "_9mobile", color: "mediumseagreen" },
 ];
 
 const plans = [
@@ -33,7 +33,7 @@ const plans = [
     MTN:
   { size: "1.5GB", duration: "30 Days", price: "₦31,200" },
  Glo:  { size: "2GB", duration: "Weekly", price: "₦1200" },
-9mobile:{ size: "10GB", duration: "30 Days", price: "₦3,600" }
+_9mobile:{ size: "10GB", duration: "30 Days", price: "₦3,600" }
   
   }
 ];
