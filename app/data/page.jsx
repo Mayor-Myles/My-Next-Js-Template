@@ -40,7 +40,7 @@ export default function DataAirtimePage() {
 
   const [selectedPlan,setSelectedPlan] = useState(null);
 
-  const [phoneNumber,setPhoneNumber] = useState("080xxxxxxxx");
+  const [phoneNumber,setPhoneNumber] = useState(null);
 
 
   
@@ -161,7 +161,7 @@ export default function DataAirtimePage() {
 
             <Flex justify="space-between">
               <Text color="gray.600">Plan Cost</Text>
-              <Text fontWeight="medium">₦{selectedPlan?.price}</Text>
+              <Text fontWeight="medium">{selectedPlan?.price}</Text>
             </Flex>
 
             <Flex justify="space-between">
