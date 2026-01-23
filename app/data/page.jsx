@@ -98,7 +98,7 @@ export default function DataAirtimePage() {
           
         </Flex>
 
-        <Grid templateColumns="repeat(3, 1fr)" gap={4} mb={6} display={selectedPlan && "none">
+        <Grid templateColumns="repeat(3, 1fr)" gap={4} mb={6} display={selectedPlan && "none"} >
           {plans.map((plan, i) => (
             <Box
               key={i}
