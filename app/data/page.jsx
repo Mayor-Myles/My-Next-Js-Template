@@ -109,7 +109,7 @@ export default function DataAirtimePage() {
           {plans[selectedNetwork].map((plan, i) => (
             <Box
               key={i}
-              display={selectedPlan? "none" : "flex"}
+              display={selectedPlan?.size ? "none" : "flex"}
              
               justifyContent="center"
               align="center"
