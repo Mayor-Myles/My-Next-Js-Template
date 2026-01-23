@@ -93,7 +93,7 @@ export default function DataAirtimePage() {
         </Box>
 
         {/* Data Plans*/}
-        <Flex display={selectedPlan && "none"} justify="space-between" mb={3}>
+        <Flex display={selectedPlan?.size ? "none" : "flex"} justify="space-between" mb={3}>
           <Text fontWeight="bold">Data Plans</Text>
           
         </Flex>
@@ -109,8 +109,9 @@ export default function DataAirtimePage() {
               p={2}
               borderRadius="2xl"
               boxShadow="lg"
+              onChange={(e)=> setPhoneNumber(e.target.value)}
               border={plan.size === "1.5GB" ? "2px solid purple.600" : "none"}
-            onClick={()=>setSelectedPlan(plan)}
+              onClick={()=>setSelectedPlan(plan)}
               >
               <Text fontWeight="bold">{plan.size}</Text>
               <Text fontSize="sm" color="gray.500">
@@ -173,7 +174,7 @@ export default function DataAirtimePage() {
             <Flex justify="space-between" align="center">
               <Text fontWeight="bold">Total Amount</Text>
               <Text fontSize="2xl" fontWeight="bold" color="putple.600">
-                ₦{selectedPlan?.price}
+                {selectedPlan?.price}
               </Text>
             </Flex>
 
