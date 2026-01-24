@@ -25,11 +25,11 @@ import {useRouter} from "next/navigation";
 const services = [
   { title: "Airtime", icon: FiPhone , url:"/airtime" },
   { title: "Data", icon: FiWifi , url:"/data" },
-  { title: "Fashion", icon: FiScissors ,url:"/data"},
-  { title: "Graphics Design", icon: FiPenTool , url:"/data" },
-  { title: "Drawing Art", icon: FiEdit3 , url:"/data"},
-  { title: "Web Design", icon: FiMonitor , url:"/data"},
-  { title: "Bulk SMS", icon: FiMessageSquare, url:"/data" },
+  { title: "Fashion", icon: FiScissors ,url:"/hire?category=fashion"},
+  { title: "Graphics Design", icon: FiPenTool , url:"/hire?category=graphics-design" },
+  { title: "Drawing Art", icon: FiEdit3 , url:"/hire?category=drawing-art"},
+  { title: "Website Design", icon: FiMonitor , url:"/hire?category=website-design"},
+  { title: "Bulk SMS", icon: FiMessageSquare, url:"/hire?category=bulk-sms" },
 ];
 
 export default function Services() {
