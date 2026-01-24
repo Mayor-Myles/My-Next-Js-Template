@@ -22,6 +22,16 @@ const networks = [
   { name: "_9mobile", color: "mediumseagreen" },
 ];
 
+export const airtimeAmounts = [
+  100,
+  200,
+  500,
+  1000,
+  2000,
+  5000,
+];
+
+
 export default function BuyAirtime() {
   const [networkSelected, setNetworkSelected] = useState(null);
   const [phoneNumber, setPhoneNumber] = useState("");
