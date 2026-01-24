@@ -1,7 +1,8 @@
+
 "use client";
 
 import { ChakraProvider } from '@chakra-ui/react';
-import {Suspense} from "@/react";
+import Spinner from "@/spinner";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,6 +12,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         
         <ChakraProvider>
+
+          <Spinner />
           
           {children}
         
