@@ -3,6 +3,8 @@
 
 import { ChakraProvider } from '@chakra-ui/react';
 import Spinner from "@/spinner";
+import Suspense from "react";
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -12,11 +14,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         
         <ChakraProvider>
-
+<Suspense fallback={null}>
           <Spinner />
-          
+
           {children}
-        
+</Suspense>
         </ChakraProvider>
           
       </body>
