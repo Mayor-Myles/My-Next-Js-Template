@@ -12,6 +12,8 @@ import {
   Flex,
   IconButton,
   useColorModeValue,
+  Link,
+  
 } from "@chakra-ui/react";
 import { FaGoogle, FaFacebookF, FaTwitter } from "react-icons/fa";
 import TopNavbar from "@/topnavbar";
@@ -90,10 +92,14 @@ export default function Login() {
         </Stack>
 
         {/* Divider */}
-        <Flex align="center" my={6}>
+        <Flex justify="center" align="center" my={6}>
           
           <Text px={3} fontSize="sm" color={muted}>
             Or sign in with
+          </Text>
+
+          <Text px={3} fontSize="sm" color={muted}>
+            No Account? <Link color="purple.600" href="/register">Register</Link>
           </Text>
           
         </Flex>
