@@ -20,7 +20,7 @@ export default function HeroSection() {
 const[isLoading,setIsLoading] = useState(false);
   const router = useRouter();
 
-function handleSpin() => {
+function handleSpin() {
 setIsLoading(true);
   const spin = setTimeout(() => {
 
