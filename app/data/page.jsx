@@ -33,7 +33,7 @@ const networks = [
 
 
 
-export default function DataAirtimePage() {
+export default function BuyData() {
   
   const [networkSelected,setNetworkSelected] = useState(null);
 
