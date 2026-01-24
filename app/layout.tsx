@@ -3,7 +3,7 @@
 
 import { ChakraProvider } from '@chakra-ui/react';
 import Spinner from "@/spinner";
-import Suspense from "react";
+import {Suspense} from "react";
 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
