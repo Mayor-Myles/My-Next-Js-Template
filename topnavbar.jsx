@@ -74,7 +74,10 @@ const router = useRouter();
           </HStack>
 
           {/* Actions */}
-          {
+      
+            <HStack spacing={3}>
+
+    {
           user.isAuthenticated ? (
 
             <Box p={2} border="2px solid gray">
@@ -86,8 +89,7 @@ const router = useRouter();
             </Box>      
               ) :
            (
-            <HStack spacing={3}>
-
+              
            <IconButton size="lg" onClick={toggleColorMode} icon={colorMode ==="light" ? <CiDark size="1.7em" /> : <CiLight size="1.7em" />} />
             
             <Button
