@@ -17,9 +17,13 @@ import {
 import { SearchIcon, StarIcon } from "@chakra-ui/icons";
 import TopNavbar from "@/topnavbar";
 import BottomNavbar from "@/bottomNav";
+import {useAtom} from "jotai";
+import {expertsState} from "@/state";
+
+
 
 const categories = ["All", "Fashion", "Website Developer" , "Graphics", "Drawing Art", "Bulk SMS" ]; 
-
+const [experts,setExperts] = useAtom(expertsState);
 
 export default function ExpertsMobileView() {
   const bg = useColorModeValue("gray.50", "gray.900");
@@ -54,7 +58,7 @@ export default function ExpertsMobileView() {
             borderRadius="full"
             size="sm"
             variant="outline"
-            _hover={{bg:"purple.600"}}
+            _hover={{bg:"purple.600",color:"white"}}
             flexShrink={0}
           >
         {category}
@@ -69,18 +73,23 @@ export default function ExpertsMobileView() {
         
 
         {/* Expert Card */}
+
+        {
+          experts.map((expert,i)=> (
+            
         <Box
+          key={i}
           bg={cardBg}
           borderRadius="lg"
           overflow="hidden"
           boxShadow="md"
-          mx="1em"
+          mx="0.5em"
         >
           {/* Image */}
           <Box position="relative">
             <Image
-              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2"
-              alt="Expert"
+              src={expert.image}
+              alt={expert.name}
               w="100%"
               h={{ base: "220px", sm: "260px" }}
               objectFit="cover"
@@ -105,21 +114,21 @@ export default function ExpertsMobileView() {
             <Flex justify="space-between" align="center">
               <Box>
                 <Text fontWeight="bold" fontSize="md">
-                  Julianne Veronica
+                  {expert.name}
                 </Text>
                 <Text
                   fontSize="md"
                   fontWeight="semibold"
                   color="purple.400"
                 >
-                  CREATIVE DIRECTOR
+                  {expert.role.toUpperCase()}
                 </Text>
               </Box>
 
               <Flex align="center" gap={1}>
                 <Icon as={StarIcon} color="yellow.400" boxSize={4} />
                 <Text fontWeight="bold" fontSize="sm">
-                  4.9
+                  {expert.rating}
                 </Text>
               </Flex>
             </Flex>
@@ -142,7 +151,7 @@ export default function ExpertsMobileView() {
               <Button
                 variant="outline"
                 borderRadius="sm"
-                size="sm"
+                size="md"
                 w="40%"
               >
                 Profile
@@ -150,8 +159,8 @@ export default function ExpertsMobileView() {
 
               <Button
                 colorScheme="purple"
-                borderRadius="sm"
-                size="sm"
+                borderRadius="md"
+                size="md"
                 w="60%"
               >
                 Hire Now
@@ -159,6 +168,7 @@ export default function ExpertsMobileView() {
             </Flex>
           </Stack>
         </Box>
+            ))}
       </Stack>
       <BottomNavbar />
     </Box>
