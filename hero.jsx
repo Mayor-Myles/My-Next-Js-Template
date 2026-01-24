@@ -34,6 +34,7 @@ function handleHireClick() {
   setLoading({hire: true,
   data: false,}); 
   },500)
+}
 
   function handleDataClick() { 
   
