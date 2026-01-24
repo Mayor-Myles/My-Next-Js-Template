@@ -42,6 +42,7 @@ export default function BuyAirtime() {
 
   const handleProceed = () => {
     if (!networkSelected || !phoneNumber || !amount) {
+     toast.closeAll();
       toast({
         title: "Incomplete details",
         description: "Please select network, enter phone number and amount",
@@ -133,7 +134,7 @@ export default function BuyAirtime() {
         <Box
           key={value}
           p={3}
-          borderRadius="2xl"
+          borderRadius="sm"
           boxShadow="lg"
           textAlign="center"
           cursor="pointer"
@@ -147,19 +148,7 @@ export default function BuyAirtime() {
       ))}
     </Grid>
 
-    <Box p={4} borderRadius="2xl" mb={6} boxShadow="sm">
-      <Text fontSize="sm" color="gray.500" mb={2}>
-        OR ENTER CUSTOM AMOUNT
-      </Text>
-      <Input
-        size="md"
-        fontWeight="bold"
-        variant="flushed"
-        placeholder="₦0.00"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-      />
-    </Box>
+    
   </>
 )}
 
