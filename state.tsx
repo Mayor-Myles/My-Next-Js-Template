@@ -2,7 +2,7 @@
 
 import { atom } from "jotai";
 
-export const plansAtom = atom({
+export const plansState= atom({
   MTN: [
     { size: "500MB", duration: "7 Days", price: 300 },
     { size: "1GB", duration: "7 Days", price: 500 },
