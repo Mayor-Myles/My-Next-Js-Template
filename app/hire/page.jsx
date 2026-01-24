@@ -15,6 +15,11 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { SearchIcon, StarIcon } from "@chakra-ui/icons";
+import TopNavbar from "@/topnavbar";
+
+
+const categories = ["All", "Fashion", "Website Developer" , "Graphics", "Drawing Art", "Bulk SMS" ]; 
+
 
 export default function ExpertsMobileView() {
   const bg = useColorModeValue("gray.50", "gray.900");
@@ -24,6 +29,7 @@ export default function ExpertsMobileView() {
 
   return (
     <Box minH="100vh" bg={bg} px={3} py={4}>
+    <TopNavbar />
       <Stack spacing={4} maxW="420px" mx="auto">
         {/* Search */}
         <InputGroup>
@@ -33,40 +39,34 @@ export default function ExpertsMobileView() {
           <Input
             placeholder="Search experts..."
             bg={inputBg}
-            borderRadius="full"
+            
             _focus={{ borderColor: "purple.400" }}
           />
         </InputGroup>
 
         {/* Filters */}
         <Flex gap={2} overflowX="auto" pb={1}>
-          <Button
+          {categories.map((caregory,i) => (
+      
+      <Button
+            key={i}
             colorScheme="purple"
             borderRadius="full"
             size="sm"
+            variant="outline"
+            _hover={{bg:"purple.600"}}
             flexShrink={0}
           >
-            All Experts
+        {category.name}
+      
           </Button>
 
-          <Button
-            variant="outline"
-            borderRadius="full"
-            size="sm"
-            flexShrink={0}
-          >
-            Fashion Design
-          </Button>
+      )}
 
-          <Button
-            variant="outline"
-            borderRadius="full"
-            size="sm"
-            flexShrink={0}
-          >
-            Styling
-          </Button>
+          
         </Flex>
+
+        
 
         {/* Expert Card */}
         <Box
