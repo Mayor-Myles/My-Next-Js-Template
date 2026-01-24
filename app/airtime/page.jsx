@@ -90,7 +90,7 @@ export default function BuyAirtime() {
 
         {/* Recipient Number */}
         {!showSummary && (
-          <Box p={4} borderRadius="2xl" mb={6} boxShadow="sm">
+          <Flex p={4} borderRadius="2xl" mb={6} boxShadow="sm">
             <Text fontSize="sm" color="gray.500" mb={2}>
               RECIPIENT NUMBER
             </Text>
@@ -101,12 +101,8 @@ export default function BuyAirtime() {
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
             />
-          </Box>
-        )}
-
-        {/* Airtime Amount */}
-        {!showSummary && (
-          <Box p={4} borderRadius="2xl" mb={6} boxShadow="sm">
+              
+          
             <Text fontSize="sm" color="gray.500" mb={2}>
               AMOUNT
             </Text>
@@ -118,9 +114,11 @@ export default function BuyAirtime() {
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
             />
-          </Box>
+          
+          </Flex>
         )}
 
+    
 
         {/* Airtime Amount */}
 {!showSummary && (
