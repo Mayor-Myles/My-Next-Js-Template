@@ -12,6 +12,7 @@ import {
   Input,
   Badge,
   Switch,
+  useToast,
 } from "@chakra-ui/react";
 import TopNavbar from "@/topnavbar";
 import BottomNav from "@/bottomNav";
@@ -41,6 +42,28 @@ export default function DataAirtimePage() {
   const [phoneNumber,setPhoneNumber] = useState(null);
 
 const [plans,setPlans] = useAtom(plansState);
+
+const toast = useToast();
+
+const popUp = (title,type) => {
+
+  if(!phoneNumber){
+    
+   toast.closeAll(); 
+  
+  toast({
+      title: 'Success!',
+      description: 'Your action was completed successfully.',
+      status: 'success',
+      duration: 3000,
+      isClosable: true,
+      position:"top",
+    });
+
+  }
+  };
+
+
   
   return (
     <Box minH="100vh" py={6}>
@@ -87,7 +110,7 @@ const [plans,setPlans] = useAtom(plansState);
             defaultValue={phoneNumber}
             variant="flushed"
             onChange={(e)=>setPhoneNumber(e.target.value)}
-            
+            required="required"
           />
         </Box>
 
@@ -109,7 +132,7 @@ const [plans,setPlans] = useAtom(plansState);
               borderRadius="2xl"
               boxShadow="lg"
               border={plan.size === "1.5GB" ? "2px solid purple.600" : "none"}
-              onClick={()=>setSelectedPlan(plan)}
+              onClick={()=>setSelectedPlan(plan); popUp("Heads Up!","info"}
               >
               <Text fontWeight="bold">{plan.size}</Text>
               <Text fontSize="sm" color="gray.500">
