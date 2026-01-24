@@ -23,7 +23,7 @@ import {useRouter} from "next/navigation";
 
 
 const services = [
-  { title: "Airtime", icon: FiPhone , url:"/data" },
+  { title: "Airtime", icon: FiPhone , url:"/airtime" },
   { title: "Data", icon: FiWifi , url:"/data" },
   { title: "Fashion", icon: FiScissors ,url:"/data"},
   { title: "Graphics Design", icon: FiPenTool , url:"/data" },
