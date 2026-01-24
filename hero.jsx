@@ -29,18 +29,18 @@ const [loading, setLoading] = useState({
   const router = useRouter();
 
 function handleHireClick() { 
+ 
+  setLoading((prev)=> ({...prev,hire:true}) ); 
   
   setTimeout(() => {
-  setLoading({hire: true,
-  data: false,}); 
+  router.push("/hire?category=all");
   },500)
 }
 
   function handleDataClick() { 
-  
+  setLoading((prev) => ({...prev,data:true}));
   setTimeout(() => {
-    setLoading({hire: false,
-  data: true,});
+    router.push("/data");
   },500)
 
 
@@ -93,19 +93,19 @@ function handleHireClick() {
               leftIcon={<Icon as={FiUserPlus} />}
               _hover={{ bg: secondary }}
               borderRadius="xl"
-              onClick={()=>{router.push("/hire?category=all"); handleHireClick();}}
+              onClick={()=>{ handleHireClick();}}
             >
               Find Talent
             </Button>
 
             <Button
-              isLoading={isLoading}
+              isLoading={loading.data}
               size="lg"
               variant="outline"
               borderColor="gray.300"
               leftIcon={<Icon as={FiWifi} />}
               borderRadius="xl"
-              onClick={()=>{router.push("/data"); handleDataClick();}}
+              onClick={()=>{handleDataClick();}}
             >
               Buy Data & Airtime
             </Button>
