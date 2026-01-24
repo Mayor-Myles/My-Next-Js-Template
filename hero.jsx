@@ -17,15 +17,26 @@ import {useState} from "react";
 export default function HeroSection() {
   const primary = "#4B2E83"; // deep purple
   const secondary = "#6B46C1";
-const[isLoading,setIsLoading] = useState(false);
+import { useState } from "react";
+
+const [loading, setLoading] = useState({
+  hire: false,
+  data: false,
+});
   const router = useRouter();
 
-function handleSpin() {
-setIsLoading(true);
-  const spin = setTimeout(() => {
+function handleHireClick() { 
+  
+  setTimeout(() => {
+  setLoading({hire: true,
+  data: false,}); 
+  },500)
 
-    setIsLoading(false);
-    
+  function handleDataClick() { 
+  
+  setTimeout(() => {
+    setLoading({hire: false,
+  data: true,});
   },500)
 
 
@@ -71,14 +82,14 @@ setIsLoading(true);
             pt={2}
           >
             <Button
-              isLoading={isLoading}
+              isLoading={loading.hire}
               size="lg"
               bg={primary}
               color="white"
               leftIcon={<Icon as={FiUserPlus} />}
               _hover={{ bg: secondary }}
               borderRadius="xl"
-              onClick={()=>{router.push("/hire?category=all"); handleSpin();}}
+              onClick={()=>{router.push("/hire?category=all"); handleHireClick();}}
             >
               Find Talent
             </Button>
@@ -90,7 +101,7 @@ setIsLoading(true);
               borderColor="gray.300"
               leftIcon={<Icon as={FiWifi} />}
               borderRadius="xl"
-              onClick={()=>router.push("/data")}
+              onClick={()=>{router.push("/data"); handleDataClick();}}
             >
               Buy Data & Airtime
             </Button>
