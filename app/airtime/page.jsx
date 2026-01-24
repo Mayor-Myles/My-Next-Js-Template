@@ -19,7 +19,7 @@ import TopNavbar from "@/topnavbar";
 import BottomNav from "@/bottomNav";
 import {useState,useEffect} from "react";
 import {useAtom} from "jotai";
-import {plansState} from "@/state";
+import {airtimeState} from "@/state";
 
 
 
