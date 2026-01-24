@@ -90,25 +90,25 @@ export default function Login() {
 
         {/* Divider */}
         <Flex align="center" my={6}>
-          <Divider />
+          
           <Text px={3} fontSize="sm" color={muted}>
             Or sign in with
           </Text>
-          <Divider />
+          
         </Flex>
 
         {/* Social Login */}
         <Flex gap={4} justify="center">
           <IconButton
             aria-label="Sign in with Google"
-            icon={<FaGoogle />}
+            icon={<FaGoogle color="orange" />}
             variant="outline"
             borderRadius="xl"
             size="lg"
           />
           <IconButton
             aria-label="Sign in with Facebook"
-            icon={<FaFacebookF />}
+            icon={<FaFacebookF color="dodgerblue" />}
             variant="outline"
             borderRadius="xl"
             size="lg"
