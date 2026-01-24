@@ -26,7 +26,7 @@ export default function Login() {
     <>
     <TopNavbar/>
     <Box
-      minH="100vh"
+      minH={{md:"100vh"}}
       bg={bg}
       display="flex"
       alignItems="center"
