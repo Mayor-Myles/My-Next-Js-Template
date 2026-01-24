@@ -46,7 +46,7 @@ export default function ExpertsMobileView() {
 
         {/* Filters */}
         <Flex gap={2} overflowX="auto" pb={1}>
-          {categories.map((caregory,i) => (
+          {categories.map((category,i) => (
       
       <Button
             key={i}
@@ -61,7 +61,7 @@ export default function ExpertsMobileView() {
       
           </Button>
 
-      )}
+      ))}
 
           
         </Flex>
