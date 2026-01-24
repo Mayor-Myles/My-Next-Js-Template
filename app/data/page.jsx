@@ -81,8 +81,8 @@ const popUp = (title,type) => {
             <VStack key={i} spacing={1}>
               <Flex
                 onClick={()=>setNetworkSelected(net.name)}
-                w="72px"
-                h="72px"
+                w="70px"
+                h="70px"
                 bg={networkSelected === net.name ? net.color : "#9CA3AF"}
                 color="white"
                 borderRadius="xl"
@@ -91,7 +91,7 @@ const popUp = (title,type) => {
                 border={net.name === "MTN" ? "3px solid purple.500" : "none"}
               >
                 
-            <Text fontWeight="bold">{net.name}</Text>
+            <Text fontSize="14px" fontWeight="bold">{net.name}</Text>
               
               </Flex>
                       
@@ -132,7 +132,7 @@ const popUp = (title,type) => {
               borderRadius="2xl"
               boxShadow="lg"
               border={plan.size === "1.5GB" ? "2px solid purple.600" : "none"}
-              onClick={()=>setSelectedPlan(plan); popUp("Heads Up!","info"}
+              onClick={()=>setSelectedPlan(plan); popUp("Heads Up!","info")}
               >
               <Text fontWeight="bold">{plan.size}</Text>
               <Text fontSize="sm" color="gray.500">
