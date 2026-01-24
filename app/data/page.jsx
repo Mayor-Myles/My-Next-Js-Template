@@ -132,7 +132,7 @@ const popUp = (title,type) => {
               borderRadius="2xl"
               boxShadow="lg"
               border={plan.size === "1.5GB" ? "2px solid purple.600" : "none"}
-              onClick={()=>setSelectedPlan(plan); popUp("Heads Up!","info")}
+              onClick={()=>setSelectedPlan(plan) popUp("Heads Up!","info")}
               >
               <Text fontWeight="bold">{plan.size}</Text>
               <Text fontSize="sm" color="gray.500">
