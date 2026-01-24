@@ -42,10 +42,10 @@ export default function Login() {
         boxShadow="sm"
         p={{ base: 6, sm: 8 }}
       >
-        {/* Logo */}
+        
         <Flex justify="center" mb={6}>
           <Text fontSize="lg" fontWeight="bold" color="purple.500">
-          Mylezic
+          
           </Text>
            
         </Flex>
