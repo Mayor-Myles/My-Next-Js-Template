@@ -23,14 +23,17 @@ import {expertsState} from "@/state";
 
 
 const categories = ["All", "Fashion", "Website Developer" , "Graphics", "Drawing Art", "Bulk SMS" ]; 
-const [experts,setExperts] = useAtom(expertsState);
 
 export default function ExpertsMobileView() {
   const bg = useColorModeValue("gray.50", "gray.900");
   const cardBg = useColorModeValue("white", "gray.800");
   const inputBg = useColorModeValue("white", "gray.700");
   const textMuted = useColorModeValue("gray.600", "gray.400");
+const [experts,setExperts] = useAtom(expertsState);
+const [experts,setExperts] = useAtom(expertsState);
 
+
+  
   return (
     <Box minH="100vh" bg={bg} px={3} py={4}>
     <TopNavbar />
