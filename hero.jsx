@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { FiUserPlus, FiWifi } from "react-icons/fi";
 import {useRouter} from "next/navigation";
-
+import {useState} from "react";
 
 export default function HeroSection() {
   const primary = "#4B2E83"; // deep purple
@@ -27,8 +27,6 @@ setIsLoading(true);
     setIsLoading(false);
     
   },500)
-
-  clearTimeout(spin);
 
 
 }
@@ -80,7 +78,7 @@ setIsLoading(true);
               leftIcon={<Icon as={FiUserPlus} />}
               _hover={{ bg: secondary }}
               borderRadius="xl"
-              onClick={()=>{router.push("/hire?=all"); handleSpin();}}
+              onClick={()=>{router.push("/hire?category=all"); handleSpin();}}
             >
               Find Talent
             </Button>
