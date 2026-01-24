@@ -10,7 +10,7 @@ import {
   Fade
 } from '@chakra-ui/react';
 
-export default function Spinner() {
+export default function SpinnerEffect() {
   const [isLoading, setIsLoading] = useState(false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
