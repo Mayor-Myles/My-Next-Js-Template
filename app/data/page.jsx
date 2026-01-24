@@ -59,7 +59,7 @@ const popUp = (title,message,type) => {
       isClosable: true,
       position:"top",
     });
-
+return;
   }
   };
 
