@@ -17,15 +17,21 @@ import {
   HStack,
   useColorModeValue,
   useColorMode,
+  Avatar,
 } from "@chakra-ui/react";
 import { CiMenuFries, CiLight, CiDark } from "react-icons/ci";
+import {userState} from "@/state";
+import {useRouter} from "next/navigation";
+import {useAtom} from "jotai";
+
 
 export default function TopNavbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const brandColor = "purple.400"; // deep purple
    const bg = useColorModeValue("white","black");
 const {colorMode, toggleColorMode} = useColorMode();
-
+const router = useRouter();
+  const[user,setUser] = useAtom(userState);
      
   return (
     <>
@@ -47,7 +53,7 @@ const {colorMode, toggleColorMode} = useColorMode();
           justify="space-between"
         >
           {/* Logo */}
-          <Text fontSize="lg" fontWeight="bold" color={brandColor}>
+          <Text onClick={()=>router.push("/");} fontSize="lg" fontWeight="bold" color={brandColor}>
             Mylezic
           </Text>
 
@@ -68,11 +74,21 @@ const {colorMode, toggleColorMode} = useColorMode();
           </HStack>
 
           {/* Actions */}
-          <HStack spacing={3}>
+          {
+          user.isAuthenticated ? (
+            
+            <Avatar
+      name={user.name}
+      src={user.gender === "male"? "https://i.pinimg.com/564x/b3/e5/db/b3e5db5a3bf1399f74500a6209462794.jpg" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXB_1EHdjgjcvq0AK52i0YlenrCIctpJJ74A&usqp=CAU" }
+      size="md"
+    />) : (
+            
+            <HStack spacing={3}>
 
            <IconButton size="lg" onClick={toggleColorMode} icon={colorMode ==="light" ? <CiDark size="1.7em" /> : <CiLight size="1.7em" />} />
             
             <Button
+              onClick={()=>router.push("/login")}
               size="sm"
               variant="outline"
               borderColor="purple.600"
@@ -81,6 +97,7 @@ const {colorMode, toggleColorMode} = useColorMode();
             </Button>
 
             <Button
+              onClick={()=>router.push("/register")}
               size="sm"
               bg={brandColor}
               color="white"
@@ -103,6 +120,7 @@ const {colorMode, toggleColorMode} = useColorMode();
               _hover={{bg:"purple.600"}}
             />
           </HStack>
+            )
         </Flex>
       </Box>
 
