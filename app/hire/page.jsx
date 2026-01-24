@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { SearchIcon, StarIcon } from "@chakra-ui/icons";
 import TopNavbar from "@/topnavbar";
-
+import BottomNavbar from "@/bottomNav";
 
 const categories = ["All", "Fashion", "Website Developer" , "Graphics", "Drawing Art", "Bulk SMS" ]; 
 
@@ -160,6 +160,7 @@ export default function ExpertsMobileView() {
           </Stack>
         </Box>
       </Stack>
+      <BottomNavbar />
     </Box>
   );
 }
