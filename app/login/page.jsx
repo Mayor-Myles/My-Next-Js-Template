@@ -23,7 +23,8 @@ export default function Login() {
   const muted = useColorModeValue("gray.600", "gray.400");
 
   return (
-    
+    <>
+    <TopNavbar/>
     <Box
       minH="100vh"
       bg={bg}
@@ -32,7 +33,7 @@ export default function Login() {
       justifyContent="center"
       px={4}
     >
-      <TopNavbar/>
+      
       <Box
         w="100%"
         maxW="420px"
@@ -43,13 +44,13 @@ export default function Login() {
       >
         {/* Logo */}
         <Flex justify="center" mb={6}>
-          <Image
-            src="/logo.png" // replace with your logo
-            alt="Logo"
-            h="40px"
-          />
+          <Text fontSize="lg" fontWeight="bold" color="purple.500">
+          Mylezic
+          </Text>
+           
         </Flex>
 
+        
         {/* Title */}
         <Stack spacing={1} mb={6} textAlign="center">
           <Text fontSize="xl" fontWeight="bold">
