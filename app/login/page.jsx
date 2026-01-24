@@ -14,7 +14,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FaGoogle, FaFacebookF, FaTwitter } from "react-icons/fa";
-import TopNavbar from "topnavbar";
+import TopNavbar from "@/topnavbar";
 
 
 export default function Login() {
