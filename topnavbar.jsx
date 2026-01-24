@@ -79,7 +79,7 @@ const router = useRouter();
 
     {
           user.isAuthenticated ? (
-
+<>
             <Box borderRadius="full" p={2} border="2px solid white">
             <Avatar
       name={user.name}
@@ -89,7 +89,7 @@ const router = useRouter();
             </Box>  
 <IconButton size="lg" onClick={toggleColorMode} icon={colorMode ==="light" ? <CiDark size="1.7em" /> : <CiLight size="1.7em" />} />
          
-            
+</>
               ) :
            (
              <>
