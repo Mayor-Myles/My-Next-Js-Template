@@ -119,7 +119,7 @@ const popUp = (title,message,type) => {
         </Box>
 
         {/* Data Plans*/}
-        <Flex justify="space-between" mb={3} display={networkSelected ? "flex" : "none"} >
+        <Flex justify="space-between" mb={3} display={selectedPlan ? "none" : "flex"} >
           <Text fontWeight="bold">Data Plans</Text>          
         </Flex>
 
