@@ -19,7 +19,7 @@ export default function SpinnerEffect() {
     setIsLoading(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000); // Small delay for better UX
+    }, 500); // Small delay for better UX
 
     return () => clearTimeout(timer);
   }, [pathname, searchParams]);
@@ -45,7 +45,7 @@ export default function SpinnerEffect() {
               speed="0.65s"
               emptyColor="gray.200"
               color="purple.500"
-              size="2xl"
+              size="3em"
               mb={4}
             />
             <Box color="white" fontWeight="medium">
